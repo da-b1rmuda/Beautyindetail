@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Статистика салона красоты</title>
+		<link rel="stylesheet" type="text/css" href="./Styles/AdminStyle.css" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script src="./Scripts/AdminChart.js"></script>
+		<script src="./Scripts/Http/http.js"></script>
+	</head>
+	<body>
+		<h1 class="title">Статистика салона красоты</h1>
+		<div class="hamburger-menu">
+			<div class="hamburger-icon" id="hamburger-open">&#9776;</div>
+			<div class="hamburger-content">
+				<a href="./Admin_categoryservice.html"
+					><div class="hamburger-inner" id="buttoncategory2">
+						Категории услуги
+					</div></a
+				>
+				<a href="./Admin_service.html"
+					><div class="hamburger-inner" id="buttonservice2">Услуги</div></a
+				>
+				<div class="hamburger-inner" id="buttonclient2">
+					<a href="./Admin_clients.html">Клиенты</a>
+				</div>
+				<div class="hamburger-inner" id="buttonmaster2">
+					<a href="./Admin_masters.html">Мастера</a>
+				</div>
+				<div class="hamburger-inner" id="buttonrecord2">
+					<a href="./Admin_record.html">Записи</a>
+				</div>
+				<div class="hamburger-inner" id="buttondiagramma2">
+					<a href="./Chart.html">Диаграмма</a>
+				</div>
+			</div>
+		</div>
+		<div class="sidebar">
+			<div class="titleadmin"><p>Панель администратора</p></div>
+			<div class="button-container1">
+				<a href="./Admin_categoryservice.html">
+					<div class="button" id="buttoncategory">
+						<div class="inner">Категории услуги</div>
+					</div>
+				</a>
+				<a href="./Admin_service.html">
+					<div class="button" id="buttonservice">
+						<div class="inner">Услуги</div>
+					</div>
+				</a>
+				<a href="./Admin_clients.html">
+					<div class="button" id="buttonclient">
+						<div class="inner">Клиенты</div>
+					</div>
+				</a>
+				<a href="./Admin_masters.html">
+					<div class="button" id="buttonmaster">
+						<div class="inner">Мастера</div>
+					</div>
+				</a>
+				<a href="./Admin_record.html">
+					<div class="button" id="buttonrecord">
+						<div class="inner">Записи</div>
+					</div>
+				</a>
+				<a href="./Chart.html">
+					<div class="button" id="buttondiagramma">
+						<div class="inner">Диаграмма</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="chart-container">
+			<canvas id="revenue-chart"></canvas>
+		</div>
+		<div class="chart-container">
+			<canvas id="visits-chart"></canvas>
+		</div>
+	</body>
+</html>

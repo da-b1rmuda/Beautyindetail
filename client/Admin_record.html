@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Записи</title>
+<style type="text/css">
+  @import url("./Styles/AdminStyle.css");
+  </style>
+  <script async src="./Scripts/AdminRecord.js"></script>
+  <script src="./Scripts/Http/http.js"></script>
+</head>
+<body>
+<h1 class="title">Записи</h1>
+<div class="hamburger-menu">
+  <div class="hamburger-icon" id="hamburger-open">&#9776;</div>
+  <div class="hamburger-content">
+    <a href="./Admin_categoryservice.html"
+      ><div class="hamburger-inner" id="buttoncategory2">
+        Категории услуги
+      </div></a
+    >
+    <a href="./Admin_service.html"
+      ><div class="hamburger-inner" id="buttonservice2">Услуги</div></a
+    >
+    <div class="hamburger-inner" id="buttonclient2">
+      <a href="./Admin_clients.html">Клиенты</a>
+    </div>
+    <div class="hamburger-inner" id="buttonmaster2">
+      <a href="./Admin_masters.html">Мастера</a>
+    </div>
+    <div class="hamburger-inner" id="buttonrecord2">
+      <a href="./Admin_record.html">Записи</a>
+    </div>
+    <div class="hamburger-inner" id="buttondiagramma2">
+      <a href="./Chart.html">Диаграмма</a>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="titleadmin"><p>Панель администратора</p></div>
+  <div class="button-container1">
+    <a href="./Admin_categoryservice.html">
+      <div class="button" id="buttoncategory">
+        <div class="inner">Категории услуги</div>
+      </div>
+    </a>
+    <a href="./Admin_service.html">
+      <div class="button" id="buttonservice">
+        <div class="inner">Услуги</div>
+      </div>
+    </a>
+    <a href="./Admin_clients.html">
+      <div class="button" id="buttonclient">
+        <div class="inner">Клиенты</div>
+      </div>
+    </a>
+    <a href="./Admin_masters.html">
+      <div class="button" id="buttonmaster">
+        <div class="inner">Мастера</div>
+      </div>
+    </a>
+    <a href="./Admin_record.html">
+      <div class="button" id="buttonrecord">
+        <div class="inner">Записи</div>
+      </div>
+    </a>
+    <a href="./Chart.html">
+      <div class="button" id="buttondiagramma">
+        <div class="inner">Диаграмма</div>
+      </div>
+    </a>
+  </div>
+</div>
+    <div class="button-container">
+      <div class="button" onclick="openModal()">
+        <div class="inner">Добавить запись</div>
+      </div>
+      <div class="button" onclick="openRedModal()">
+        <div class="inner">Изменить запись</div>
+      </div>
+      <div class="button" onclick="openDelModal()">
+        <div class="inner">Удалить запись</div>
+      </div>
+    </div>
+    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Поиск по наименованию услуги"><br>
+    <div id="tableContainer">
+      <table id="client">
+      </table>
+    <div id="paginationButtons">
+    </div>
+    <div id="addForm" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h1 class="title2">Добавление</h1><br>
+        <table>
+          <tr>
+            <td><label class="text" for="data">Дата:</label></td>
+            <td><input type="text" id="data1"></td>
+          </tr>
+          <tr>
+            <td><label class="text" for="time">Время:</label></td>
+            <td><input type="text" id="time1"></td>
+          </tr>
+          <tr>
+            <td><label class="text" for="text">Категория услуг:</label></td>
+          <td><select class="select" id="category1"></select> </td>
+          </tr>
+          <tr>
+            <td><label class="text" for="text">Наименование услуги:</label></td>
+          <td><select class="select" id="name1"></select> </td>
+          </tr>
+          <tr>
+            <td><label class="text" for="dob">Мастер:</label></td>
+            <td><select class="select" id="master1"></select> </td>
+          </tr>
+          <tr>
+            <td><label class="text" for="idvisitor">Id клиента:</label></td>
+            <td><input type="text" id="idvisitor1"></td>
+          </tr>
+          <tr>
+            <td><label class="text" for="visitor">Клиент:</label></td>
+            <td><input type="text" id="visitor1"></td>
+          </tr>
+          <tr>
+            <td><label class="text" for="phone">Телефон клиента:</label></td>
+            <td><input type="text" id="phone1"></td>
+          </tr>
+        </table>
+        <br>
+      <div class="button2">
+        <div class="inner2" onclick="addRecord()">Добавить</div>
+      </div>
+    </div>
+    </div>
+    <div id="redForm" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeRedModal()">&times;</span>
+        <h1 class="title2">Изменение</h1><br>
+      <table>
+        <tr>
+          <td><label class="text" for="id">Id:</label></td>
+          <td><input type="text" id="id"></td>
+        </tr>
+        <tr>
+          <td><label class="text" for="data">Дата:</label></td>
+          <td><input type="text" id="data"></td>
+        </tr>
+        <tr>
+          <td><label class="text" for="time">Время:</label></td>
+          <td><input type="text" id="time"></td>
+        </tr>
+        <tr>
+          <td><label class="text" for="text">Категория услуг:</label></td>
+        <td><select class="select" id="category"></select> </td>
+        </tr>
+        <tr>
+          <td><label class="text" for="text">Наименование услуги:</label></td>
+        <td><select class="select" id="name"></select> </td>
+        </tr>
+        <tr>
+          <td><label class="text" for="dob">Мастер:</label></td>
+          <td><select class="select" id="master"></select> </td>
+        </tr>
+        <tr>
+          <td><label class="text" for="idvisitor">Id клиента:</label></td>
+          <td><input type="text" id="idvisitor"></td>
+        </tr>
+        <tr>
+          <td><label class="text" for="visitor">Клиент:</label></td>
+          <td><input type="text" id="visitor"></td>
+        </tr>
+        <tr>
+          <td><label class="text" for="phone">Телефон клиента:</label></td>
+          <td><input type="text" id="phone"></td>
+        </tr>
+      </table>
+      <br>
+      <div class="button2">
+        <div class="inner2" onclick="redRecord()">Изменить</div>
+      </div>
+    </div>
+    </div>
+    <div id="delForm" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeDelModal()">&times;</span>
+        <h1 class="title2">Удаление</h1><br>
+      <table>
+        <tr>
+          <td><label class="text" for="id">Id:</label></td>
+          <td><input type="text" id="id3"></td>
+        </tr>
+      </table>
+      <br>
+      <div class="button2">
+        <div class="inner2" onclick="dellRecord()">Удалить</div>
+      </div>
+      </div>
+    </div>
+</body>
+</html>

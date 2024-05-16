@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+    background: #F4F2F3;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+table {
+  border-collapse: collapse;
+  width: 90%;
+}
+#tableContainer {
+  display: flex;
+  justify-content: center;
+}
+.hamburger-menu{
+  display: none;
+}
+#searchInput {
+  width: 1000px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #EFB7B7;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 50px;
+  height: 40px;
+  font-size: 16px;
+}
+#paginationButtons {
+  position: fixed;
+  bottom: 20px;
+  right: 15%;
+  margin: 20px;
+  z-index: 1; 
+}
+
+#paginationButtons button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: black;
+  font-size: 17px; 
+  font-family: Montserrat; 
+  border: 1px solid #EFB7B7;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 1000px;
+  margin-left: 50px;
+}
+
+.button {
+  width: 160px;
+  height: 40px;
+  position: relative;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30); 
+  margin-bottom: 10px;
+  background: #ffcccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.inner {
+  width: 139.65px; 
+  height: 18.38px; 
+  left: 10.20px; 
+  top: 10.81px;
+  position: absolute; 
+  text-align: center; 
+  color: black; 
+  font-size: 15px; 
+  font-family: Montserrat; 
+  font-weight: 400; 
+  line-height: 17.39px; 
+  word-wrap: break-word;
+}
+
+.title {
+  color: #EFB7B7;
+  font-size: 48px;
+  font-family: 'Kudryashev Display', sans-serif;
+  font-weight: 400;
+  line-height: 45.07px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.text {
+  color: black;
+  font-size: 16px; 
+  font-family: Montserrat; 
+}
+table, th, td {
+  border: 0px solid rgb(255, 255, 255);
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  color: black;
+font-size: 16px; 
+font-family: Montserrat; 
+}
+.sidebar {
+  background: #EFB7B7;
+  height: 100vh;
+  width: 200px;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.button-container1 {
+  margin-bottom: 20px;
+}
+
+.button2 {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  background: #ffcccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.inner2 {
+  color: black;
+  font-size: 16px;
+  font-family: Montserrat; 
+}
+
+.titleadmin {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Kudryashev Display;
+  margin-bottom: 15px;
+}
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 350px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .title2 {
+    color: #EFB7B7;
+    font-size: 30px;
+    font-family: Kudryashev Display;
+    word-wrap: break-word;
+    text-align: center;
+  }
+
+.chart-container {
+  width: 50%;
+  margin: 20px auto;
+}
+@media (max-width: 500px) {
+  body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    top: 8px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+  }
+
+  .open .sidebar {
+    display: block;
+  }
+  .title {
+    top: 30px;
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .button {
+    width: 100px;
+    height: 25px;
+  }
+  .button-container{
+    margin-top: 0;
+    margin-left: 1.5%;
+    width: 100%;
+  }
+
+  .inner {
+    width: 100px;
+    height: 15px;
+    font-size: 10px;
+    top: 2.5px;
+    left: 0;
+  }
+  #searchInput {
+    width: 90%;
+    height: 20px;
+    margin-top: 0;
+    margin-left: 1.5%;
+    font-size: 10px;
+  }
+  th, td {
+    padding: 1px;
+    text-align: left;
+    color: black;
+  font-size: 6.5px; 
+  font-family: Montserrat; 
+  }
+  #paginationButtons button {
+    margin: 5px;
+    padding: 2px 5px;
+    cursor: pointer;
+    color: black;
+    font-size: 10px; 
+    font-family: Montserrat; 
+    border: 1px solid #EFB7B7;
+  }
+  
+  .hamburger-icon {
+    cursor: pointer;
+  }
+  
+  .hamburger-content {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    background-color: #f9f9f9;
+    padding: 10px;
+    font-size: 10px; 
+    font-family: Montserrat; 
+    border: 1px solid #ccc;
+    width: 120px;
+  }
+  
+  .hamburger-content.active {
+    display: block;
+  }
+  
+  .hamburger-inner {
+    padding: 5px;
+    cursor: pointer;
+  }
+}

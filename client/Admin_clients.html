@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Данные клиентов</title>
+<style type="text/css">
+  @import url("./Styles/AdminStyle.css");
+  </style>
+    <script async src="./Scripts/AdminClients.js"></script>
+    <script src="./Scripts/Http/http.js"></script>
+  </head>
+<body>
+<h1 class="title">Данные клиентов</h1>
+<div class="hamburger-menu">
+  <div class="hamburger-icon" id="hamburger-open">&#9776;</div>
+  <div class="hamburger-content">
+    <a href="./Admin_categoryservice.html"
+      ><div class="hamburger-inner" id="buttoncategory2">
+        Категории услуги
+      </div></a
+    >
+    <a href="./Admin_service.html"
+      ><div class="hamburger-inner" id="buttonservice2">Услуги</div></a
+    >
+    <div class="hamburger-inner" id="buttonclient2">
+      <a href="./Admin_clients.html">Клиенты</a>
+    </div>
+    <div class="hamburger-inner" id="buttonmaster2">
+      <a href="./Admin_masters.html">Мастера</a>
+    </div>
+    <div class="hamburger-inner" id="buttonrecord2">
+      <a href="./Admin_record.html">Записи</a>
+    </div>
+    <div class="hamburger-inner" id="buttondiagramma2">
+      <a href="./Chart.html">Диаграмма</a>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="titleadmin"><p>Панель администратора</p></div>
+  <div class="button-container1">
+    <a href="./Admin_categoryservice.html">
+      <div class="button" id="buttoncategory">
+        <div class="inner">Категории услуги</div>
+      </div>
+    </a>
+    <a href="./Admin_service.html">
+      <div class="button" id="buttonservice">
+        <div class="inner">Услуги</div>
+      </div>
+    </a>
+    <a href="./Admin_clients.html">
+      <div class="button" id="buttonclient">
+        <div class="inner">Клиенты</div>
+      </div>
+    </a>
+    <a href="./Admin_masters.html">
+      <div class="button" id="buttonmaster">
+        <div class="inner">Мастера</div>
+      </div>
+    </a>
+    <a href="./Admin_record.html">
+      <div class="button" id="buttonrecord">
+        <div class="inner">Записи</div>
+      </div>
+    </a>
+    <a href="./Chart.html">
+      <div class="button" id="buttondiagramma">
+        <div class="inner">Диаграмма</div>
+      </div>
+    </a>
+  </div>
+</div>
+<div class="button-container">
+  <div class="button" onclick="openModal()">
+    <div class="inner">Добавить запись</div>
+  </div>
+  <div class="button" onclick="openRedModal()">
+    <div class="inner">Изменить запись</div>
+  </div>
+  <div class="button" onclick="openDelModal()">
+    <div class="inner">Удалить запись</div>
+  </div>
+</div>
+<input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Поиск по фамилии"><br>
+<div id="tableContainer">
+  <table id="client">
+  </table>
+<div id="paginationButtons">
+</div>
+<div id="addForm" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h1 class="title2">Добавление</h1><br>
+    <table>
+      <tr>
+        <td><label class="text" for="lastname">Фамилия:</label></td>
+        <td><input type="text" id="lastname1"></td>
+      </tr>
+      <tr>
+        <td><label class="text" for="name">Имя:</label></td>
+        <td><input type="text" id="name1"></td>
+      </tr>
+      <tr>
+        <td><label class="text" for="patronymic">Отчество:</label></td>
+        <td><input type="text" id="patronymic1"></td>
+      </tr>
+      <tr>
+        <td><label class="text" for="phone">Телефон:</label></td>
+        <td><input type="text" id="phone1"></td>
+      </tr>
+      <tr>
+        <td><label class="text" for="dob">Дата рождения:</label></td>
+        <td><input type="text" id="dob1"></td>
+      </tr>
+      <tr>
+        <td><label class="text" for="login">Логин:</label></td>
+        <td><input type="text" id="login1"></td>
+      </tr>
+      <tr>
+        <td><label class="text" for="password">Пароль:</label></td>
+        <td><input type="text" id="password1"></td>
+      </tr>
+      <tr>
+        <td><label class="text" for="email">Почта:</label></td>
+        <td><input type="text" id="email1"></td>
+      </tr>
+    </table>
+    <br>
+  <div class="button2">
+    <div class="inner2" onclick="addRecord()">Добавить</div>
+  </div>
+</div>
+</div>
+<div id="redForm" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeRedModal()">&times;</span>
+    <h1 class="title2">Изменение</h1><br>
+  <table>
+    <tr>
+      <td><label class="text" for="id">Id:</label></td>
+      <td><input type="text" id="id"></td>
+    </tr>
+    <tr>
+      <td><label class="text" for="lastname">Фамилия:</label></td>
+      <td><input type="text" id="lastname"></td>
+    </tr>
+    <tr>
+      <td><label class="text" for="name">Имя:</label></td>
+      <td><input type="text" id="name"></td>
+    </tr>
+    <tr>
+      <td><label class="text" for="patronymic">Отчество:</label></td>
+      <td><input type="text" id="patronymic"></td>
+    </tr>
+    <tr>
+      <td><label class="text" for="phone">Телефон:</label></td>
+      <td><input type="text" id="phone"></td>
+    </tr>
+    <tr>
+      <td><label class="text" for="dob">Дата рождения:</label></td>
+      <td><input type="text" id="dob"></td>
+    </tr>
+    <tr>
+      <td><label class="text" for="login">Логин:</label></td>
+      <td><input type="text" id="login"></td>
+    </tr>
+    <tr>
+      <td><label class="text" for="password">Пароль:</label></td>
+      <td><input type="text" id="password"></td>
+    </tr>
+    <tr>
+      <td><label class="text" for="email">Почта:</label></td>
+      <td><input type="text" id="email"></td>
+    </tr>
+  </table>
+  <br>
+  <div class="button2">
+    <div class="inner2" onclick="redRecord()">Изменить</div>
+  </div>
+</div>
+</div>
+<div id="delForm" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeDelModal()">&times;</span>
+    <h1 class="title2">Удаление</h1><br>
+  <table>
+    <tr>
+      <td><label class="text" for="id">Id:</label></td>
+      <td><input type="text" id="id3"></td>
+    </tr>
+  </table>
+  <br>
+  <div class="button2">
+    <div class="inner2" onclick="delRecord()">Удалить</div>
+  </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty in detail</title>
+<style type="text/css">
+@import url("./Styles/Css3.css");
+</style>
+<script async src="./Scripts/Record.js"></script>
+<script src="./Scripts/Http/http.js"></script>
+</head>
+ <body>
+ <nav>
+      <div class="navbar">
+        <div class="container1 nav-container1">
+          <input class="checkbox" type="checkbox"  />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div> 
+			<div class="logo2">
+            <h1>Beauty in detail</h1>
+          </div> 
+			<div class="address"> <a>г. Димитровград, пр. Ленина д.43 </a></div>
+			<div class="phone"><a>+7(937)124-98-63</a></div>
+			<div class="time"><a>Пн-Вс 09:00-18:00</a> </div>
+          <div class="menu-items">
+            <li><a href="Beauty in detail.html" class="a1">Главная</a></li>
+            <li><a href="#main-section2" class="a1">Контакты</a></li>
+          </div> 
+			<div class="photo1"><img  width="1000px" src="Image/Приветсвие.jpg"></div>
+      <div class="id2"></div>
+        </div> 
+      </div>
+ </nav>
+ <div style="width: 799px; height: 335px; top: 570px;left: 300px; position: absolute;">
+  <div style="left: -40px; top: 15px;  position: absolute; color: #EFB7B7; font-size: 48px; font-family: Kudryashev Display; font-weight: 400; word-wrap: break-word">Свобные окошки</div>
+</div>
+<div class="button2" id="button2">
+  <div class="inner2" onclick="toggleRecords()">Мои записи</div>
+</div>
+<div class="button3" id="button3">
+  <div class="inner3" onclick="Records()">Записаться</div>
+</div>
+<div class="record" id="record">
+  <a class="category">Категория </a><select id="categorySelect">
+    <option>--Выберите категорию--</option>
+  </select>
+  <a class="category">Услуга </a><select id="serviceSelect">
+    <option>--Выберите услугу--</option>
+  </select>
+  <a class="category">День </a><select id="daySelect">
+    <option>--Выберите день--</option>
+  </select>
+  <a class="category">Время </a><select id="timeSelect">
+    <option>--Выберите время--</option>
+  </select>
+  <br>  <br>
+  <table id="recordsTable">
+    <thead>
+        <tr>
+            <th id="id3">id</th> 
+            <th>Наименование категории</th> 
+            <th>Услуга</th>
+            <th>Фамилия имя отчество мастера</th>
+            <th>День</th>
+            <th>Время</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+  <div class="button">
+     <div class="inner" onclick="openModal()">Записаться</div>
+  </div>
+  <div class="button4" id="button4">
+    <div class="inner" onclick="delrecord()">Отменить запись</div>
+ </div>
+</div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p class="AV">Подтвердите запись</p>
+      <p class="services">Услуга </p>
+      <p class="master"></p>
+      <p class="day"></p>
+      <p class="time2"></p>
+      <div class="Zbutton" id="submitBtn">Записаться</div>
+    </div>
+  </div>
+
+        <div class="footer-container">
+            <div class="rectangle"></div>
+            <div class="logo"><h3>Beauty in detail</h3></div>
+          </div>
+          <div id="delForm">
+            <div class="modal-content2">
+              <span class="close2" onclick="closeDelModal()">&times;</span>
+              <h1 class="title2">Отменить запись</h1><br>
+                 <label class="text" for="id">Id записи:</label>
+                <input type="text" id="id4">
+              <br><br>
+              <div class="button5" onclick="delRecord2()">
+                <div class="inner5">Отменить</div>
+              </div>
+            </div>
+          </div>
+ </body>
+</html>

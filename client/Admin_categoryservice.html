@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Категории услуг</title>
+		<style type="text/css">
+			@import url('./Styles/AdminStyle.css');
+		</style>
+	</head>
+	<body>
+		<h1 class="title">Категории услуг</h1>
+		<div class="hamburger-menu">
+			<div class="hamburger-icon" id="hamburger-open">&#9776;</div>
+			<div class="hamburger-content">
+				<a href="./Admin_categoryservice.html"
+					><div class="hamburger-inner" id="buttoncategory2">
+						Категории услуги
+					</div></a
+				>
+				<a href="./Admin_service.html"
+					><div class="hamburger-inner" id="buttonservice2">Услуги</div></a
+				>
+				<div class="hamburger-inner" id="buttonclient2">
+					<a href="./Admin_clients.html">Клиенты</a>
+				</div>
+				<div class="hamburger-inner" id="buttonmaster2">
+					<a href="./Admin_masters.html">Мастера</a>
+				</div>
+				<div class="hamburger-inner" id="buttonrecord2">
+					<a href="./Admin_record.html">Записи</a>
+				</div>
+				<div class="hamburger-inner" id="buttondiagramma2">
+					<a href="./Chart.html">Диаграмма</a>
+				</div>
+			</div>
+		</div>
+		<div class="sidebar">
+			<div class="titleadmin"><p>Панель администратора</p></div>
+			<div class="button-container1">
+				<a href="./Admin_categoryservice.html">
+					<div class="button" id="buttoncategory">
+						<div class="inner">Категории услуги</div>
+					</div>
+				</a>
+				<a href="./Admin_service.html">
+					<div class="button" id="buttonservice">
+						<div class="inner">Услуги</div>
+					</div>
+				</a>
+				<a href="./Admin_clients.html">
+					<div class="button" id="buttonclient">
+						<div class="inner">Клиенты</div>
+					</div>
+				</a>
+				<a href="./Admin_masters.html">
+					<div class="button" id="buttonmaster">
+						<div class="inner">Мастера</div>
+					</div>
+				</a>
+				<a href="./Admin_record.html">
+					<div class="button" id="buttonrecord">
+						<div class="inner">Записи</div>
+					</div>
+				</a>
+				<a href="./Chart.html">
+					<div class="button" id="buttondiagramma">
+						<div class="inner">Диаграмма</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="button-container">
+			<div class="button" id="openModal">
+				<div class="inner">Добавить запись</div>
+			</div>
+			<div class="button" id="openRedModal">
+				<div class="inner">Изменить запись</div>
+			</div>
+			<div class="button" id="openDelModal">
+				<div class="inner">Удалить запись</div>
+			</div>
+		</div>
+		<input
+			type="text"
+			id="searchInput"
+			placeholder="Поиск по наименованию"
+		/><br />
+		<div id="tableContainer">
+			<table id="client"></table>
+			<div id="paginationButtons"></div>
+		</div>
+		<div id="addForm" class="modal">
+			<div class="modal-content">
+				<span class="close" id="closeModal">&times;</span>
+				<h1 class="title2">Добавление</h1>
+				<br />
+				<table>
+					<tr>
+						<td><label class="text" for="name">Наименовавние:</label></td>
+						<td><input type="text" id="name1" /></td>
+					</tr>
+				</table>
+				<br />
+				<div class="button2">
+					<div class="inner2" id="addRecord">Добавить</div>
+				</div>
+			</div>
+		</div>
+		<div id="redForm" class="modal">
+			<div class="modal-content">
+				<span class="close" id="closeRedModal">&times;</span>
+				<h1 class="title2">Изменение</h1>
+				<br />
+				<table>
+					<tr>
+						<td><label class="text" for="id">Id:</label></td>
+						<td><input type="text" id="datainput" /></td>
+					</tr>
+					<tr>
+						<td><label class="text" for="name">Наименовавние:</label></td>
+						<td><input type="text" id="name" /></td>
+					</tr>
+				</table>
+				<br />
+				<div class="button2">
+					<div class="inner2" id="redRecord">Изменить</div>
+				</div>
+			</div>
+		</div>
+		<div id="delForm" class="modal">
+			<div class="modal-content">
+				<span class="close" id="closeDelModal">&times;</span>
+				<h1 class="title2">Удаление</h1>
+				<br />
+				<table>
+					<tr>
+						<td><label class="text" for="id">Id:</label></td>
+						<td><input type="text" id="id3" /></td>
+					</tr>
+				</table>
+				<br />
+				<div class="button2">
+					<div class="inner2" id="delRecord">Удалить</div>
+				</div>
+			</div>
+		</div>
+		<script src="./Scripts/AdminCategory.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="./Scripts/Http/http.js"></script>
+	</body>
+</html>
