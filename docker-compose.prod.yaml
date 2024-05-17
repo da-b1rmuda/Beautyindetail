@@ -11,7 +11,7 @@ services:
       - DB_PASSWORD=password
       - DB_DATABASE=Beauty_in_details
     ports:
-      - 5011:5005
+      - '5011:5005'
     depends_on:
       - postgres
     networks:
@@ -21,7 +21,7 @@ services:
   client:
     build: ./staticServer
     ports:
-      - 8030:5010
+      - '8030:5010'
     depends_on:
       - server
     networks:
