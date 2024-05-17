@@ -45,29 +45,31 @@ window.onload = function () {
 		})
 		.catch(error => console.error(error))
 
-	function openModal() {
+	document.getElementById('openModal').onclick = function () {
 		document.getElementById('addForm').style.display = 'block'
 	}
 
-	function closeModal() {
-		document.getElementById('addForm').style.display = 'none' // Закрываем модальное окно при нажатии на кнопку закрытия
+	document.getElementById('closeModal').onclick = function () {
+		document.getElementById('addForm').style.display = 'none'
 	}
 
-	function openRedModal() {
+	document.getElementById('openRedModal').onclick = function () {
 		document.getElementById('redForm').style.display = 'block'
 	}
 
-	function closeRedModal() {
+	document.getElementById('closeRedModal').onclick = function () {
 		document.getElementById('redForm').style.display = 'none'
 	}
-	function openDelModal() {
+
+	document.getElementById('openDelModal').onclick = function () {
 		document.getElementById('delForm').style.display = 'block'
 	}
 
-	function closeDelModal() {
+	document.getElementById('closeDelModal').onclick = function () {
 		document.getElementById('delForm').style.display = 'none'
 	}
-	function addRecord() {
+
+	document.getElementById('addRecord').onclick = function () {
 		const name = document.getElementById('name1').value
 		const lastname = document.getElementById('lastname1').value
 		const patronymic = document.getElementById('patronymic1').value
@@ -107,6 +109,7 @@ window.onload = function () {
 				console.error('Error:', error)
 			})
 	}
+
 	let currentPage = 1
 	const itemsPerPage = 2 // Количество элементов на странице
 
@@ -143,7 +146,8 @@ window.onload = function () {
 			paginationContainer.appendChild(button)
 		}
 	}
-	function searchTable() {
+
+	document.getElementById('searchInput').onkeyup = function () {
 		var input, filter, table, tr, td, i, txtValue
 		input = document.getElementById('searchInput')
 		filter = input.value.toUpperCase()
@@ -162,7 +166,8 @@ window.onload = function () {
 			}
 		}
 	}
-	function redRecord() {
+
+	document.getElementById('redRecord').onclick = function () {
 		const id = document.getElementById('id').value
 		const name = document.getElementById('name').value
 		const lastname = document.getElementById('lastname').value
@@ -204,7 +209,7 @@ window.onload = function () {
 			})
 	}
 
-	function delRecord() {
+	document.getElementById('delRecord').onclick = function () {
 		const id = document.getElementById('id3').value
 
 		const requestOptions = {
@@ -222,6 +227,7 @@ window.onload = function () {
 			})
 			.catch(error => alert(error))
 	}
+
 	fetch(`${window.API_URL}/category/getCategory`, requestOptions)
 		.then(response => {
 			if (!response.ok) {

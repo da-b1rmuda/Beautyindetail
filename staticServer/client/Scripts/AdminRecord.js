@@ -40,28 +40,31 @@ window.onload = function () {
 			renderPaginationButtons(Math.ceil((data.length + 1) / itemsPerPage))
 		})
 		.catch(error => console.error(error))
-	function openModal() {
+
+	document.getElementById('openModal').onclick = function () {
 		document.getElementById('addForm').style.display = 'block'
 	}
 
-	function closeModal() {
-		document.getElementById('addForm').style.display = 'none' // Закрываем модальное окно при нажатии на кнопку закрытия
+	document.getElementById('closeModal').onclick = function () {
+		document.getElementById('addForm').style.display = 'none'
 	}
 
-	function openRedModal() {
+	document.getElementById('openRedModal').onclick = function () {
 		document.getElementById('redForm').style.display = 'block'
 	}
 
-	function closeRedModal() {
+	document.getElementById('closeRedModal').onclick = function () {
 		document.getElementById('redForm').style.display = 'none'
 	}
-	function openDelModal() {
+
+	document.getElementById('openDelModal').onclick = function () {
 		document.getElementById('delForm').style.display = 'block'
 	}
 
-	function closeDelModal() {
+	document.getElementById('closeDelModal').onclick = function () {
 		document.getElementById('delForm').style.display = 'none'
 	}
+
 	let currentPage = 1
 	const itemsPerPage = 10 // Количество элементов на странице
 
@@ -98,7 +101,8 @@ window.onload = function () {
 			paginationContainer.appendChild(button)
 		}
 	}
-	function addRecord() {
+
+	document.getElementById('addRecord').onclick = function () {
 		const recordData = {
 			day: document.getElementById('data1').value,
 			time: document.getElementById('time1').value,
@@ -128,7 +132,8 @@ window.onload = function () {
 				alert('Ошибка! Запись не добавлена', error)
 			})
 	}
-	function redRecord() {
+
+	document.getElementById('redRecord').onclick = function () {
 		const id = document.getElementById('id').value
 		const recordData = {
 			day: document.getElementById('data').value,
@@ -155,7 +160,8 @@ window.onload = function () {
 				console.error('Error:', error)
 			})
 	}
-	function searchTable() {
+
+	document.getElementById('searchInput').onkeyup = function () {
 		var input, filter, table, tr, td, i, txtValue
 		input = document.getElementById('searchInput')
 		filter = input.value.toUpperCase()
@@ -174,7 +180,8 @@ window.onload = function () {
 			}
 		}
 	}
-	function dellRecord() {
+
+	document.getElementById('dellRecord').onclick = function () {
 		const id = document.getElementById('id3').value
 
 		const requestOptions = {
@@ -192,7 +199,8 @@ window.onload = function () {
 			})
 			.catch(error => alert(error))
 	}
-	//редактирование
+
+	//РЕДАКТИРОВАНИЕ
 	fetch(`${window.API_URL}/category/getCategory`, requestOptions)
 		.then(response => {
 			if (!response.ok) {
@@ -212,6 +220,7 @@ window.onload = function () {
 		.catch(error => {
 			console.log('error', error)
 		})
+
 	// Получение списка мастеров
 	fetch(`${window.API_URL}/masters/getMasters`, requestOptions)
 		.then(response => {
@@ -253,6 +262,7 @@ window.onload = function () {
 		.catch(error => {
 			console.log('error', error)
 		})
+
 	// Получение мастеров определенной категории
 	const selectElement1 = document.getElementById('category')
 	selectElement1.addEventListener('change', () => {
@@ -310,7 +320,7 @@ window.onload = function () {
 			})
 	})
 
-	//добавление
+	//ДОБАВЛЕНИЕ
 	fetch(`${window.API_URL}/category/getCategory`, requestOptions)
 		.then(response => {
 			if (!response.ok) {
@@ -319,12 +329,54 @@ window.onload = function () {
 			return response.json()
 		})
 		.then(data => {
-			const selectElement1 = document.getElementById('category1')
+			const selectElement = document.getElementById('category1')
 			data.forEach(category => {
 				const option = document.createElement('option')
 				option.value = category.id
 				option.text = category.name
-				selectElement1.appendChild(option)
+				selectElement.appendChild(option)
+			})
+		})
+		.catch(error => {
+			console.log('error', error)
+		})
+
+	// Получение списка мастеров
+	fetch(`${window.API_URL}/masters/getMasters`, requestOptions)
+		.then(response => {
+			if (!response.ok) {
+				throw new Error('Network response was not ok')
+			}
+			return response.json()
+		})
+		.then(data => {
+			const selectElementMaster = document.getElementById('master1')
+			data.forEach(master => {
+				const option = document.createElement('option')
+				option.value = master.id
+				option.text = master.master_name
+				selectElementMaster.appendChild(option)
+			})
+		})
+		.catch(error => {
+			console.log('error', error)
+		})
+
+	// Получение списка услуг
+	fetch(`${window.API_URL}/services/getServices`, requestOptions)
+		.then(response => {
+			if (!response.ok) {
+				throw new Error('Network response was not ok')
+			}
+			return response.json()
+		})
+		.then(data => {
+			const selectElementService = document.getElementById('name1')
+			data.forEach(service => {
+				const option = document.createElement('option')
+				option.value = service.id
+				option.text = service.name
+				selectElementService.appendChild(option)
 			})
 		})
 		.catch(error => {
@@ -332,9 +384,9 @@ window.onload = function () {
 		})
 
 	// Получение мастеров определенной категории
-	const selectElement2 = document.getElementById('category1')
-	selectElement2.addEventListener('change', () => {
-		const categoryId = selectElement2.value
+	const selectElement3 = document.getElementById('category1')
+	selectElement3.addEventListener('change', () => {
+		const categoryId = selectElement3.value
 		fetch(
 			`${window.API_URL}/masters/getMasterByCategory/${categoryId}`,
 			requestOptions
@@ -346,13 +398,13 @@ window.onload = function () {
 				return response.json()
 			})
 			.then(data => {
-				const selectElement1 = document.getElementById('master1')
-				selectElement1.innerHTML = '' // Очистить предыдущие опции
+				const selectElement = document.getElementById('master1')
+				selectElement.innerHTML = '' // Очистить предыдущие опции
 				data.forEach(master => {
 					const option = document.createElement('option')
 					option.value = master.id
 					option.text = master.master_name
-					selectElement1.appendChild(option)
+					selectElement.appendChild(option)
 				})
 			})
 			.catch(error => {
@@ -361,8 +413,8 @@ window.onload = function () {
 	})
 
 	// Получение услуг определенной категории
-	selectElement2.addEventListener('change', () => {
-		const categoryId = selectElement2.value
+	selectElement3.addEventListener('change', () => {
+		const categoryId = selectElement3.value
 		fetch(
 			`${window.API_URL}/services/getServicesByCategory/${categoryId}`,
 			requestOptions
@@ -374,13 +426,13 @@ window.onload = function () {
 				return response.json()
 			})
 			.then(data => {
-				const selectElement1 = document.getElementById('name1')
-				selectElement1.innerHTML = '' // Очистить предыдущие опции
+				const selectElement = document.getElementById('name1')
+				selectElement.innerHTML = '' // Очистить предыдущие опции
 				data.forEach(service => {
 					const option = document.createElement('option')
 					option.value = service.id
 					option.text = service.name
-					selectElement1.appendChild(option)
+					selectElement.appendChild(option)
 				})
 			})
 			.catch(error => {
@@ -446,6 +498,7 @@ window.onload = function () {
 				.catch(error => console.log('error', error))
 		}
 	})
+
 	document.getElementById('hamburger-open').onclick = function () {
 		const hamburgerContent = document.querySelector('.hamburger-content')
 		hamburgerContent.classList.toggle('active')

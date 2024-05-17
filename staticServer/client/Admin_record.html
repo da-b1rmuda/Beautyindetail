@@ -73,17 +73,17 @@
   </div>
 </div>
     <div class="button-container">
-      <div class="button" onclick="openModal()">
+      <div class="button" id="openModal">
         <div class="inner">Добавить запись</div>
       </div>
-      <div class="button" onclick="openRedModal()">
+      <div class="button" id="openRedModal">
         <div class="inner">Изменить запись</div>
       </div>
-      <div class="button" onclick="openDelModal()">
+      <div class="button" id="openDelModal">
         <div class="inner">Удалить запись</div>
       </div>
     </div>
-    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Поиск по наименованию услуги"><br>
+    <input type="text" id="searchInput" placeholder="Поиск по наименованию услуги"><br>
     <div id="tableContainer">
       <table id="client">
       </table>
@@ -91,7 +91,7 @@
     </div>
     <div id="addForm" class="modal">
       <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="close" id="closeModal">&times;</span>
         <h1 class="title2">Добавление</h1><br>
         <table>
           <tr>
@@ -128,14 +128,14 @@
           </tr>
         </table>
         <br>
-      <div class="button2">
-        <div class="inner2" onclick="addRecord()">Добавить</div>
+      <div class="button2" id="addRecord">
+        <div class="inner2" >Добавить</div>
       </div>
     </div>
     </div>
     <div id="redForm" class="modal">
       <div class="modal-content">
-        <span class="close" onclick="closeRedModal()">&times;</span>
+        <span class="close" id="closeRedModal">&times;</span>
         <h1 class="title2">Изменение</h1><br>
       <table>
         <tr>
@@ -176,14 +176,14 @@
         </tr>
       </table>
       <br>
-      <div class="button2">
-        <div class="inner2" onclick="redRecord()">Изменить</div>
+      <div class="button2" id="redRecord">
+        <div class="inner2" >Изменить</div>
       </div>
     </div>
     </div>
     <div id="delForm" class="modal">
       <div class="modal-content">
-        <span class="close" onclick="closeDelModal()">&times;</span>
+        <span class="close" id="closeDelModal">&times;</span>
         <h1 class="title2">Удаление</h1><br>
       <table>
         <tr>
@@ -192,8 +192,8 @@
         </tr>
       </table>
       <br>
-      <div class="button2">
-        <div class="inner2" onclick="dellRecord()">Удалить</div>
+      <div class="button2" id="dellRecord">
+        <div class="inner2" >Удалить</div>
       </div>
       </div>
     </div>
