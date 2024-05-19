@@ -57,7 +57,7 @@ window.onload = function () {
 			})
 			.then(data => {
 				if (!Array.isArray(data)) {
-					data = [data] // Преобразовать полученный объект в массив
+					data = [data] 
 				}
 
 				const completenessData = data.map(entry => {
@@ -79,7 +79,7 @@ window.onload = function () {
 						datasets: [
 							{
 								label: 'Процент посещаемости',
-								data: completenessData[0], // Изменено на completenessData[0] и completenessData[1]
+								data: completenessData[0], 
 								backgroundColor: [
 									'rgba(75, 192, 192, 0.6)',
 									'rgba(255, 99, 132, 0.6)',
@@ -170,7 +170,7 @@ const init = async () => {
 				doc.setFont('times-new-roman-cyr');
 				doc.setFontSize(16);
 
-				doc.text('Ежемесячный отчет о прибыли', 70, 10);
+				doc.text('Очет о ежемесячной прибыли', 70, 10);
 
 				const tableData = [];
 				data.forEach((item) => {
