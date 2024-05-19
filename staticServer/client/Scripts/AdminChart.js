@@ -170,7 +170,7 @@ const init = async () => {
 				doc.setFont('times-new-roman-cyr');
 				doc.setFontSize(16);
 
-				doc.text('Очет о ежемесячной прибыли', 70, 10);
+				doc.text('Отчет прибыли', 70, 10);
 
 				const tableData = [];
 				data.forEach((item) => {
