@@ -93,7 +93,7 @@ async getRecordbyService(id) {
     LEFT JOIN masters ON record.id_masters = masters.id
     LEFT JOIN categore_services ON services.idcategoreservices = categore_services.id
     LEFT JOIN clients ON record.id_client = clients.id
-    WHERE services.id = $1 and record.day > NOW() and AND record.id_client IS NULL`
+    WHERE services.id = $1 and record.day > NOW() AND record.id_client IS NULL`
     ,
     [id]
   );
