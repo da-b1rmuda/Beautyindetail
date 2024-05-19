@@ -93,7 +93,7 @@ async getRecordbyService(id) {
     LEFT JOIN masters ON record.id_masters = masters.id
     LEFT JOIN categore_services ON services.idcategoreservices = categore_services.id
     LEFT JOIN clients ON record.id_client = clients.id
-    WHERE services.id = $1 and record.day > NOW()` 
+    WHERE services.id = $1 and record.day > NOW() and AND record.id_client IS NULL`
     ,
     [id]
   );
@@ -108,7 +108,7 @@ async getRecordbyDay(day) {
     LEFT JOIN masters ON record.id_masters = masters.id
     LEFT JOIN categore_services ON services.idcategoreservices = categore_services.id
     LEFT JOIN clients ON record.id_client = clients.id
-    WHERE record.day = $1 and record.day > NOW()`
+    WHERE record.day = $1 and record.day > NOW() AND record.id_client IS NULL`
     ,
     [day]
   );
@@ -123,7 +123,7 @@ async getRecordbyCategory(id) {
     LEFT JOIN masters ON record.id_masters = masters.id
     LEFT JOIN categore_services ON services.idcategoreservices = categore_services.id
     LEFT JOIN clients ON record.id_client = clients.id
-    WHERE categore_services.id = $1 and record.day > NOW()`
+    WHERE categore_services.id = $1 and record.day > NOW() AND record.id_client IS NULL`
     ,
     [id]
   );
@@ -132,13 +132,13 @@ async getRecordbyCategory(id) {
 async getRecordbytime(time) {
   const response = await client.query(
     `
-    SELECT record.*, services.name AS service_name, CONCAT(masters.lastname, ' ', masters.name, ' ', masters.patronymic) AS master_name, categore_services.name AS category_name, CONCAT(clients.lastname, ' ', clients.name, ' ', clients.patronymic) AS client_name, clients.phone as client_phone, categore_services.id AS id_category_service
+    SELECT record.*, services.name AS service_name, CONCAT(masters.lastname, ' ', masters.name, ' ', masters.patronymic) AS master_name, categore_services.name AS category_name, CONCAT(clients.lastname, ' ', clients.name, ' ', clients.patronymic) AS client_name, clients.phone as client_phone, categore_services.id AS id_category_service, services.id AS id_services
     FROM record
     JOIN services ON record.id_services = services.id
     LEFT JOIN masters ON record.id_masters = masters.id
     LEFT JOIN categore_services ON services.idcategoreservices = categore_services.id
     LEFT JOIN clients ON record.id_client = clients.id
-    WHERE record.time = $1 and record.day > NOW()`
+    WHERE record.time = $1 and record.day > NOW() AND record.id_client IS NULL`
     ,
     [time]
   );
@@ -150,7 +150,9 @@ async getRevenueByMonth() {
       SELECT EXTRACT(MONTH FROM day) AS month, SUM(services.price) AS total_revenue
       FROM record
       JOIN services ON record.id_services = services.id
-      WHERE id_client IS NOT NULL
+      WHERE id_client IS NOT NULL 
+      AND EXTRACT(YEAR FROM day) = EXTRACT(YEAR FROM CURRENT_DATE)
+      AND EXTRACT(MONTH FROM day) <= EXTRACT(MONTH FROM CURRENT_DATE)
       GROUP BY EXTRACT(MONTH FROM day)
       ORDER BY EXTRACT(MONTH FROM day);
       `

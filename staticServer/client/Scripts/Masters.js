@@ -96,3 +96,17 @@ document.getElementById("epilation").addEventListener('click', () => {
   function closeRegistrationModal() {
     document.getElementById("registrationModal").style.display = "none";
   }
+	function openmyModal() {
+		document.getElementById('myModal').style.display = 'block';
+	}
+	
+	function closemyModal() {
+		document.getElementById('myModal').style.display = 'none';
+	}
+	
+	window.onclick = function(event) {
+		var modal = document.getElementById('myModal');
+		if (event.target == modal) {
+			modal.style.display = 'none';
+		}
+	}

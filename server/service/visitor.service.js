@@ -67,12 +67,7 @@ class VisitorService {
     return response.rows[0]; // Вернуть только первую строку, так как id уникален
 }
 
-async updateVisitor(id, lastname, name, patronymic, phone, dateofbirth, login, password) {
-  const loginExists = await this.checkIfLoginExists(login); // Проверка на существование логина
-
-  if (loginExists) {
-      throw new Error('Логин уже существует. Пожалуйста, выберите другой логин.');
-  }
+async updateVisitor(id, lastname, name, patronymic, phone, dateofbirth, login, password, email) {
 
   if (password.length < 6) {
       throw new Error('Пароль должен состоять как минимум из 6 символов.');

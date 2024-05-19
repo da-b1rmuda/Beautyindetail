@@ -66,7 +66,7 @@ window.onload = function () {
 	}
 
 	let currentPage = 1
-	const itemsPerPage = 10 // Количество элементов на странице
+	const itemsPerPage = 7 // Количество элементов на странице
 
 	// Функция для отображения данных на текущей странице
 	function showPage(pageNumber) {
@@ -134,15 +134,21 @@ window.onload = function () {
 	}
 
 	document.getElementById('redRecord').onclick = function () {
-		const id = document.getElementById('id').value
+		const id = document.getElementById('id').value;
+		const idVisitorInput = document.getElementById('idvisitor').value;
+		
+		// Check if idVisitorInput is empty and set id_client accordingly
+		const idClient = idVisitorInput.trim() ? idVisitorInput : null;
+	
 		const recordData = {
 			day: document.getElementById('data').value,
 			time: document.getElementById('time').value,
 			id_services: document.getElementById('name').value,
-			id_client: document.getElementById('idvisitor').value,
+			id_client: idClient, 
 			id_masters: document.getElementById('master').value,
+			id: id,
 		}
-
+	
 		fetch(`${window.API_URL}/record/updateRecord/${id}`, {
 			method: 'PUT',
 			headers: {
@@ -150,15 +156,15 @@ window.onload = function () {
 			},
 			body: JSON.stringify(recordData),
 		})
-			.then(response => response.json())
-			.then(data => {
-				console.log(data)
-				alert('Данные успешно обновлены')
-				window.location.reload()
-			})
-			.catch(error => {
-				console.error('Error:', error)
-			})
+		.then(response => response.json())
+		.then(data => {
+			console.log(data);
+			alert('Данные успешно обновлены');
+			window.location.reload();
+		})
+		.catch(error => {
+			console.error('Error:', error);
+		});
 	}
 
 	document.getElementById('searchInput').onkeyup = function () {

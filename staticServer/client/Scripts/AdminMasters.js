@@ -220,7 +220,12 @@ window.onload = function () {
 		fetch(`${window.API_URL}/masters/deleteMaster/${id}`, requestOptions)
 			.then(response => {
 				if (!response.ok) {
+					if (response.status === 500) {
+						throw new Error('Удаление не возможно: у мастера есть записи')
+					}
+					else {
 					throw new Error('Ошибка при удалении данных')
+					}
 				}
 				alert('Данные успешно удалены')
 				window.location.reload() // Reload the page to reflect changes

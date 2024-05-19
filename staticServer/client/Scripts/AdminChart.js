@@ -132,3 +132,70 @@ window.onload = function () {
 		hamburgerContent.classList.toggle('active')
 	}
 }
+
+function getMonthName(monthNumber) {
+	const monthNames = [
+		'Январь',
+		'Февраль',
+		'Март',
+		'Апрель',
+		'Май',
+		'Июнь',
+		'Июль',
+		'Август',
+		'Сентябрь',
+		'Октябрь',
+		'Ноябрь',
+		'Декабрь',
+	]
+	return monthNames[monthNumber - 1]
+}
+
+const init = async () => {
+	try {
+		const { jsPDF } = await import('https://cdn.skypack.dev/jspdf');
+		const { autoTable } = await import('https://cdn.skypack.dev/jspdf-autotable');
+
+
+		document.getElementById('download-report-btn').addEventListener('click', async () => {
+			try {
+				const response = await fetch(`${window.API_URL}/record/revenueByMonth`);
+				const data = await response.json();
+
+				const doc = new jsPDF();
+
+				doc.addFileToVFS('times-new-roman-cyr.ttf', window.timesFont);
+				doc.addFont('times-new-roman-cyr.ttf', 'times-new-roman-cyr', 'normal');
+
+				doc.setFont('times-new-roman-cyr');
+				doc.setFontSize(16);
+
+				doc.text('Ежемесячный отчет о прибыли', 70, 10);
+
+				const tableData = [];
+				data.forEach((item) => {
+					tableData.push([getMonthName(item.month), item.total_revenue]);
+				});
+
+				doc.autoTable({
+					head: [['Месяц', 'Прибыль']],
+					body: tableData,
+					didParseCell: function (data) {
+						if (data.section === 'head') {
+							data.cell.styles.halign = 'center';
+						}
+						data.cell.styles.font = 'times-new-roman-cyr';
+					}
+				});
+
+				doc.save('отчет.pdf');
+			} catch (error) {
+				console.error('Произошла ошибка:', error);
+			}
+		});
+	} catch (error) {
+		console.error('Ошибка при импорте jsPDF:', error);
+	}
+};
+
+init();
