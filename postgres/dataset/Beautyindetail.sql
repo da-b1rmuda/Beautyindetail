@@ -5,7 +5,7 @@
 -- Dumped from database version 16.2
 -- Dumped by pg_dump version 16.2
 
--- Started on 2024-05-16 15:50:52
+-- Started on 2024-05-20 12:38:57
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -230,10 +230,11 @@ COPY public.categore_services (id, name) FROM stdin;
 
 COPY public.clients (id, id_user, lastname, name, patronymic, phone, dateofbirth, email) FROM stdin;
 41	41	Иванова	Мария	Ивановна	89021273568	2024-03-08	\N
-4	4	Идиатулова	Динара	Фидратовна	+79021283567	\N	idiatulova.dinara@yandex.ru
 5	5	Кузьмина	Арина	Николаевна	89035784514	2000-07-13	kuzmina.a@gmail.com
 495821	495821	Иванова	Мария	Ивановна	89021273568	2024-03-15	marisha1222@mail.ru
 649425	649425	Идиатулова	Динара	Фидратовна	89021283567	2004-07-15	Idiatulova.dinara@yandex.ru
+694204	694204	Булкина	Екатерина	Григорьевна	89112233445	1999-10-15	
+4	4	Идиатулова	Динара	Фидратовна	+79021283567	1969-12-28	idiatulova.dinara@yandex.ru
 122220	122220	Шишкина	Екатерина	Григорьевна	89112233445	1999-10-15	\N
 997106	997106	Григорьева	Екатерина	Ивановна	89112233445	1997-12-16	\N
 \.
@@ -262,13 +263,15 @@ COPY public.masters (id, idcategoryservice, lastname, name, patronymic, phone, a
 --
 
 COPY public.record (id, day, "time", id_services, id_client, id_masters) FROM stdin;
-2	2024-06-14	14:00:00	3	5	2
-9	2024-06-10	12:10:00	3	5	2
-1	2024-04-12	15:00:00	2	495821	3
-3	2024-07-05	10:00:00	1	\N	3
-6	2024-08-02	14:10:00	9	\N	18
+9	2024-06-09	12:10:00	3	4	2
+2	2024-05-14	14:00:00	3	5	2
+10	2024-02-17	14:20:00	14	649425	17
+11	2024-01-09	15:10:00	14	997106	17
+3	2024-03-04	10:00:00	1	5	3
 8	2024-08-01	12:30:00	1	\N	3
-4	2024-06-02	11:00:00	11	\N	2
+4	2024-05-31	12:30:00	1	\N	3
+1	2024-04-12	15:00:00	2	495821	3
+6	2024-08-02	14:10:00	9	\N	18
 5	2024-07-15	11:30:00	8	\N	4
 \.
 
@@ -310,7 +313,8 @@ COPY public.users (id, login, password) FROM stdin;
 41	Maria1	1454567
 5	Arina	140720Ar
 649425	Dinara1507	16042019Ad
-4	Dinara	Динара15
+694204	Katusha	15101999
+4	Dinara	Динара
 495821	Maria5	1454567
 1	admin	adminuser
 122220	Katusha7	15101999
@@ -332,7 +336,7 @@ SELECT pg_catalog.setval('public."Categore_services_Id_seq"', 9, true);
 -- Name: Masters_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."Masters_Id_seq"', 18, true);
+SELECT pg_catalog.setval('public."Masters_Id_seq"', 19, true);
 
 
 --
@@ -341,7 +345,7 @@ SELECT pg_catalog.setval('public."Masters_Id_seq"', 18, true);
 -- Name: Record_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."Record_Id_seq"', 9, true);
+SELECT pg_catalog.setval('public."Record_Id_seq"', 11, true);
 
 
 --
@@ -470,7 +474,7 @@ ALTER TABLE ONLY public.record
     ADD CONSTRAINT record_id_services_fkey FOREIGN KEY (id_services) REFERENCES public.services(id) NOT VALID;
 
 
--- Completed on 2024-05-16 15:50:52
+-- Completed on 2024-05-20 12:38:57
 
 --
 -- PostgreSQL database dump complete

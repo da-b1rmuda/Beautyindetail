@@ -7,6 +7,7 @@ class MasterService {
       SELECT masters.*, categore_services.name AS category_name, CONCAT(masters.lastname, ' ', masters.name, ' ', masters.patronymic) AS master_name, categore_services.id as category_id
       FROM masters
       JOIN categore_services ON masters.idcategoryservice = categore_services.id
+      order by id
         `
     );
     return response;
