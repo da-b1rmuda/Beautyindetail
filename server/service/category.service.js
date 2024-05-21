@@ -5,6 +5,7 @@ class CategoryService {
 		const response = await client.query(
 			`
         select * from categore_services
+		order by id
         `
 		)
 		return response

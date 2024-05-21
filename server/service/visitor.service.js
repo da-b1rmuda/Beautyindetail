@@ -19,6 +19,7 @@ class VisitorService {
       select clients.*, users.login AS login, users.password AS password
       FROM clients
       LEFT JOIN users ON clients.id_user = users.id
+      order by id
         `
     );
     return response;

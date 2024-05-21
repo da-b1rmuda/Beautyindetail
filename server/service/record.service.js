@@ -11,6 +11,7 @@ LEFT JOIN masters ON record.id_masters = masters.id
 LEFT JOIN categore_services ON services.idcategoreservices = categore_services.id
 LEFT JOIN clients ON record.id_client = clients.id
 WHERE record.day > NOW() AND (record.id_client IS NULL OR record.id_client = 0);
+order by id
         `
     );
     return response;
@@ -24,6 +25,7 @@ LEFT JOIN services ON record.id_services = services.id
 LEFT JOIN masters ON record.id_masters = masters.id
 LEFT JOIN categore_services ON services.idcategoreservices = categore_services.id
 LEFT JOIN clients ON record.id_client = clients.id
+order by id
         `
     );
     return response;
@@ -49,6 +51,9 @@ async getRecordById(id) {
   return response.rows[0];
 }
 async addRecord(recordData) {
+  if (recordData.id_client === '') {
+    recordData.id_client = null;
+  }
   const response = await client.query(
     `
     INSERT INTO record (day, time, id_services, id_client, id_masters)

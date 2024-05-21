@@ -7,6 +7,7 @@ class ServicesService {
       SELECT services.*, categore_services.name AS category_name 
       FROM services 
       JOIN categore_services ON services.idcategoreservices = categore_services.id
+      order by id
         `
     );
     return response;

@@ -159,13 +159,13 @@ window.onload = function () {
 	window.openModal = async function () {
 		const selectedTime = timeSelect.options[timeSelect.selectedIndex].text;
 		const selectedDay = daySelect.options[daySelect.selectedIndex].text;
-		
+
 		document.querySelector('.services').textContent = "";
 		document.querySelector('.master').textContent = "";
 		document.querySelector('.day').textContent = "";
 		document.querySelector('.time2').textContent = "";
 		document.getElementById("modal").style.display = "block";
-	
+
 		if (categorySelect === '--Выберите категорию--' || serviceSelect === '--Выберите услугу--' || daySelect === '--Выберите день--' || timeSelect === '--Выберите время--') {
 			document.getElementById('modal').style.display = 'none';
 		} else {
@@ -177,17 +177,17 @@ window.onload = function () {
 						const formattedDate2 = `${date2.getFullYear()}-${String(date2.getMonth() + 1).padStart(2, '0')}-${String(date2.getDate()).padStart(2, '0')}`;
 						return formattedDate2 === selectedDay;
 					});
-	
+
 					if (filteredRecords.length > 0) {
 						const record = filteredRecords[0]; // Assuming you are interested in the first record
-						
+
 						const date2 = new Date(record.day);
 						const formattedDate2 = `${date2.getFullYear()}-${String(date2.getMonth() + 1).padStart(2, '0')}-${String(date2.getDate()).padStart(2, '0')}`;
 						document.querySelector('.services').textContent = "Услуга: " + record.service_name;
 						document.querySelector('.master').textContent = "Мастер: " + record.master_name;
 						document.querySelector('.day').textContent = "Дата: " + formattedDate2;
 						document.querySelector('.time2').textContent = "Время: " + record.time;
-	
+
 						document.getElementById('submitBtn').addEventListener('click', async () => {
 							const data2 = {
 								id_client: id,
@@ -202,7 +202,7 @@ window.onload = function () {
 								},
 								body: JSON.stringify(data2)
 							});
-	
+
 							if (response.ok) {
 								alert('Запись успешно создана');
 								window.location.reload();
@@ -222,6 +222,7 @@ window.onload = function () {
 	}
 }
 function ToggleRecords() {
+	document.getElementById('titleElement').style.display = 'none'
 	const requestOptions = {
 		method: 'GET',
 		headers: {

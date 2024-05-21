@@ -1,4 +1,29 @@
 window.onload = function () {
+	const checkbox = document.querySelector('.nav-container1 .checkbox');
+		const hamburgerLines = document.querySelector('.nav-container1 .hamburger-lines');
+		const menuItems = document.querySelector('.nav-container1 .menu-items');
+		console.log("DOM загружен");
+	
+		// Обработчик для ссылки "Услуги"
+		document.querySelector('.nav-container1 .menu-items li:nth-child(2) a').addEventListener('click', function (event) {
+			event.preventDefault();
+			handleMenuItemClick();
+			window.scrollTo(0, 550);
+		});
+	
+		// Обработчик для ссылки "Контакты"
+		document.querySelector('.nav-container1 .menu-items li:nth-child(3) a').addEventListener('click', function (event) {
+			event.preventDefault();
+			handleMenuItemClick();
+			window.scrollTo(0, 2450);
+		});
+	
+		function handleMenuItemClick() {
+			checkbox.checked = false;
+			hamburgerLines.querySelector('.line1').style.transform = '';
+			hamburgerLines.querySelector('.line2').style.transform = '';
+			hamburgerLines.querySelector('.line3').style.transform = '';
+		}
 	let id
 	const authForm = document.querySelector('#FormAvtoriz')
 	authForm.addEventListener('submit', async function (event) {
@@ -165,30 +190,3 @@ passwordButton.addEventListener('click', function (e) {
 	function closemodalpassword() {
 		document.getElementById('modalpassword').style.display = 'none'
 	}
-	document.addEventListener('DOMContentLoaded', function () {
-		const checkbox = document.querySelector('.nav-container1 .checkbox');
-		const hamburgerLines = document.querySelector('.nav-container1 .hamburger-lines');
-		const menuItems = document.querySelector('.nav-container1 .menu-items');
-		console.log("DOM загружен");
-	
-		// Обработчик для ссылки "Услуги"
-		document.querySelector('.nav-container1 .menu-items li:nth-child(2) a').addEventListener('click', function (event) {
-			event.preventDefault();
-			handleMenuItemClick();
-			window.scrollTo(0, 550);
-		});
-	
-		// Обработчик для ссылки "Контакты"
-		document.querySelector('.nav-container1 .menu-items li:nth-child(3) a').addEventListener('click', function (event) {
-			event.preventDefault();
-			handleMenuItemClick();
-			window.scrollTo(0, 2450);
-		});
-	
-		function handleMenuItemClick() {
-			checkbox.checked = false;
-			hamburgerLines.querySelector('.line1').style.transform = '';
-			hamburgerLines.querySelector('.line2').style.transform = '';
-			hamburgerLines.querySelector('.line3').style.transform = '';
-		}
-	});

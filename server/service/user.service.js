@@ -21,6 +21,7 @@ class UserService {
     const response = await client.query(
       `
         select * from users
+        order by id
         `
     );
     return response;
