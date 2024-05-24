@@ -27,8 +27,8 @@ window.onload = function () {
 			// Добавление данных о мастерах
 			data.forEach(master => {
 				const row = table.insertRow()
-				const date = new Date(master.date_of_birth)
-				const formattedDate = date.toISOString().split('T')[0]
+				const date2 = new Date(master.date_of_birth)
+				const formattedDate = `${date2.getFullYear()}-${String(date2.getMonth() + 1).padStart(2, '0')}-${String(date2.getDate()).padStart(2, '0')}`
 				row.insertCell(0).textContent = master.id
 				row.insertCell(1).textContent = master.lastname
 				row.insertCell(2).textContent = master.name

@@ -124,22 +124,23 @@ window.onload = function () {
 	}
 
 	let currentPage = 1
-	const itemsPerPage = 10 // Количество элементов на странице
+	const itemsPerPage = 6 // Количество элементов на странице
 
 	// Функция для отображения данных на текущей странице
 	function showPage(pageNumber) {
-		const rows = document.getElementById('client').rows
-
+		const table = document.getElementById('client');
+		const rows = table.rows;
+	
 		// Определяем границы отображаемых данных
-		const start = (pageNumber - 1) * itemsPerPage
-		const end = pageNumber * itemsPerPage
-
-		// Перебираем все строки таблицы и скрываем лишние
-		for (let i = 0; i < rows.length; i++) {
+		const start = (pageNumber - 1) * itemsPerPage;
+		const end = pageNumber * itemsPerPage;
+	
+		// Перебираем все строки таблицы (не включая заголовки) и скрываем лишние
+		for (let i = 1; i < rows.length; i++) { // Начинаем с 1, пропуская первую строку (заголовок)
 			if (i >= start && i < end) {
-				rows[i].style.display = ''
+				rows[i].style.display = '';
 			} else {
-				rows[i].style.display = 'none'
+				rows[i].style.display = 'none';
 			}
 		}
 	}

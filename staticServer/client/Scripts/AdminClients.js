@@ -21,8 +21,8 @@ window.onload = function () {
 			headerRow.style.fontWeight = 'bold'
 
 			data.forEach(client => {
-				const date = new Date(client.dateofbirth)
-				const formattedDate = date.toISOString().split('T')[0]
+				const date2 = new Date(client.dateofbirth)
+				const formattedDate = `${date2.getFullYear()}-${String(date2.getMonth() + 1).padStart(2, '0')}-${String(date2.getDate()).padStart(2, '0')}`
 				const row = table.insertRow()
 				row.insertCell(0).textContent = client.id
 				row.insertCell(1).textContent = client.lastname
@@ -68,18 +68,19 @@ window.onload = function () {
 
 	// Функция для отображения данных на текущей странице
 	function showPage(pageNumber) {
-		const rows = document.getElementById('client').rows
-
+		const table = document.getElementById('client');
+		const rows = table.rows;
+	
 		// Определяем границы отображаемых данных
-		const start = (pageNumber - 1) * itemsPerPage
-		const end = pageNumber * itemsPerPage
-
-		// Перебираем все строки таблицы и скрываем лишние
-		for (let i = 0; i < rows.length; i++) {
+		const start = (pageNumber - 1) * itemsPerPage;
+		const end = pageNumber * itemsPerPage;
+	
+		// Перебираем все строки таблицы (не включая заголовки) и скрываем лишние
+		for (let i = 1; i < rows.length; i++) { // Начинаем с 1, пропуская первую строку (заголовок)
 			if (i >= start && i < end) {
-				rows[i].style.display = ''
+				rows[i].style.display = '';
 			} else {
-				rows[i].style.display = 'none'
+				rows[i].style.display = 'none';
 			}
 		}
 	}
@@ -129,7 +130,6 @@ window.onload = function () {
 		const login = document.getElementById('login1').value
 		const password = document.getElementById('password1').value
 		const email = document.getElementById('email1').value
-
 		const requestOptions = {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },

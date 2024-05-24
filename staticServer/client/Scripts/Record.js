@@ -249,9 +249,7 @@ function ToggleRecords() {
 			data.forEach(record => {
 				const row = document.createElement('tr')
 				const date2 = new Date(record.day)
-				const formattedDate2 = `${date2.getFullYear()}-${String(
-					date2.getMonth() + 1
-				).padStart(2, '0')}-${String(date2.getDate()).padStart(2, '0')}`
+				const formattedDate2 = `${date2.getFullYear()}-${String(date2.getMonth() + 1).padStart(2, '0')}-${String(date2.getDate()).padStart(2, '0')}`
 				row.innerHTML = `
 					  <td>${record.id}</td>
 					  <td>${record.category_name}</td>
