@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-	background: #F4F2F3
+  background: #F4F2F3
 }
 
 .container1 {
@@ -16,33 +16,37 @@ body {
 }
 
 .navbar {
-  background: white; 
+  background: white;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.20)
 }
-.address{
-	position: absolute;
+
+.address {
+  position: absolute;
   top: 8px;
   right: 430px;
   font-size: 1.8rem;
   color: #0e2431;
- font-family: Luminari;
+  font-family: Luminari;
 }
-.phone{
-	position: absolute;
+
+.phone {
+  position: absolute;
   top: 8px;
   right: 70px;
   font-size: 1.8rem;
   color: #0e2431;
- font-family: Luminari;
+  font-family: Luminari;
 }
-.time{
-	position: absolute;
+
+.time {
+  position: absolute;
   top: 8px;
   right: 250px;
   font-size: 1.8rem;
   color: #0e2431;
- font-family: Luminari;
+  font-family: Luminari;
 }
+
 .nav-container1 {
   display: flex;
   justify-content: space-between;
@@ -56,7 +60,7 @@ body {
 
 .navbar .nav-container1 li {
   list-style: none;
-  color: #EFB7B7; 
+  color: #EFB7B7;
 }
 
 .a1 {
@@ -75,8 +79,8 @@ body {
   padding: 0.7rem;
 }
 
-.navbar .nav-container1 a:hover{
-    font-weight: bolder;
+.navbar .nav-container1 a:hover {
+  font-weight: bolder;
 }
 
 .nav-container1 {
@@ -144,7 +148,7 @@ body {
   transition: transform 0.5s ease-in-out;
   text-align: center;
   font-family: Luminari;
-	
+
 }
 
 .navbar .menu-items li {
@@ -153,64 +157,70 @@ body {
   font-weight: 500;
   font-family: Luminari;
 }
+
 .logo2 {
   position: absolute;
   top: 5px;
   right: 750px;
   font-size: 1.7rem;
-  color:#0e2431;
- font-family: Luminari, fantasy;
+  color: #0e2431;
+  font-family: Luminari, fantasy;
 }
+
 .logo {
   position: absolute;
   top: 5px;
   right: 650px;
   font-size: 1.7rem;
-  color:#0e2431;
- font-family: Luminari, fantasy;
+  color: #0e2431;
+  font-family: Luminari, fantasy;
 }
-.photo1{
+
+.photo1 {
   position: absolute;
   left: 50px;
   top: 80px;
   width: 100%;
 }
-.img1{
-width: 1000px;
+
+.img1 {
+  width: 1000px;
 }
-.nav-container1 input[type="checkbox"]:checked ~ .menu-items {
+
+.nav-container1 input[type="checkbox"]:checked~.menu-items {
   transform: translateX(0);
 }
 
-.nav-container1 input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+.nav-container1 input[type="checkbox"]:checked~.hamburger-lines .line1 {
   transform: rotate(45deg);
 }
 
-.nav-container1 input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+.nav-container1 input[type="checkbox"]:checked~.hamburger-lines .line2 {
   transform: scaleY(0);
 }
 
-.nav-container1 input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+.nav-container1 input[type="checkbox"]:checked~.hamburger-lines .line3 {
   transform: rotate(-45deg);
 }
 
-.nav-container1 input[type="checkbox"]:checked ~ .logo{
+.nav-container1 input[type="checkbox"]:checked~.logo {
   display: none;
 }
-.nav-container1 input[type="checkbox"]:checked ~ .photo1 {
+
+.nav-container1 input[type="checkbox"]:checked~.photo1 {
   display: none;
 }
 
 .container2 {
   width: 798px;
   height: 685px;
-  top: 550px;
+  top: 560px;
   left: 350px;
   position: absolute;
 }
 
 .title {
-  left: 0px;
+  left: 30%;
   top: 0px;
   position: absolute;
   color: #EFB7B7;
@@ -218,32 +228,31 @@ width: 1000px;
   font-family: Kudryashev Display;
   font-weight: 400;
   line-height: 45.07px;
-  word-wrap: break-word;
 }
 
 .service-box1 {
-width: 388px; 
-height: 272px; 
-left: 2px; 
-top: 121px; 
-position: absolute
+  width: 388px;
+  height: 272px;
+  left: 2px;
+  top: 90px;
+  position: absolute
 }
 
 .Rectangle29 {
-width: 388px; 
-height: 230px; 
-left: 0px; 
-top: 0px; 
-position: absolute
+  width: 388px;
+  height: 230px;
+  left: 0px;
+  top: 0px;
+  position: absolute
 }
 
 .Rectangle33 {
-width: 388px; 
-height: 42px; 
-left: 0px; 
-top: 230px; 
-position: absolute; 
-background: white
+  width: 388px;
+  height: 42px;
+  left: 0px;
+  top: 230px;
+  position: absolute;
+  background: white
 }
 
 .service-name1 {
@@ -258,476 +267,504 @@ background: white
   line-height: 16.90px;
   word-wrap: break-word;
 }
-.Rectangle33:hover{
-  width: 388px; 
-  height: 42px; 
-  left: 0px; 
-  top: 230px; 
-  position: absolute; 
+
+.Rectangle33:hover {
+  width: 388px;
+  height: 42px;
+  left: 0px;
+  top: 230px;
+  position: absolute;
   background: #EFB7B7
 }
+
 .service-box2 {
-  width: 388px; 
-  height: 272px; 
-  left: 410px; 
-  top: 121px; 
+  width: 388px;
+  height: 272px;
+  left: 410px;
+  top: 90px;
   position: absolute
 }
+
 .service-box3 {
-  width: 388px; 
-  height: 272px; 
-  left: 410px; 
-  top: 413px; 
+  width: 388px;
+  height: 272px;
+  left: 410px;
+  top: 382px;
   position: absolute
 }
+
 .service-box4 {
-  width: 388px; 
-  height: 272px; 
-  left: 2px; 
-  top: 413px; 
+  width: 388px;
+  height: 272px;
+  left: 2px;
+  top: 382px;
   position: absolute
 }
 
 .Rectangle30 {
-  width: 388px; 
-  height: 230px; 
-  left: 0px; 
-  top: 0px; 
+  width: 388px;
+  height: 230px;
+  left: 0px;
+  top: 0px;
   position: absolute
-  }
-.Rectangle32 {
-  width: 388px; 
-  height: 230px; 
-  left: 0px; 
-  top: 0px; 
-  position: absolute
-  }
-.Rectangle31 {
-  width: 388px; 
-  height: 230px; 
-  left: 0px; 
-  top: 0px; 
-  position: absolute
-  }
-  .category1{
-    width: 388px; 
-    height: 42px; 
-    left: 0px; 
-    top: 230px; 
-    position: absolute; 
-    background: white   
-  }
-  .category2{
-    width: 388px; 
-    height: 42px; 
-    left: 0px; 
-    top: 230px; 
-    position: absolute; 
-    background: white
-  }
-  .category3{
-    width: 388px; 
-    height: 42px; 
-    left: 0px; 
-    top: 230px; 
-    position: absolute; 
-    background: white
-  }
-  .category1:hover{
-    width: 388px; 
-    height: 42px; 
-    left: 0px; 
-    top: 230px; 
-    position: absolute; 
-    background: #EFB7B7 
-  }
-  .category2:hover{
-    width: 388px; 
-    height: 42px; 
-    left: 0px; 
-    top: 230px; 
-    position: absolute; 
-    background: #EFB7B7
-  }
-  .category3:hover{
-    width: 388px; 
-    height: 42px; 
-    left: 0px; 
-    top: 230px; 
-    position: absolute; 
-    background: #EFB7B7
-  }
-  .nail-bar{
-    left: 159px; 
-    top: 241px; 
-    position: absolute; 
-    color: black; 
-    font-size: 18px; 
-    font-family: Montserrat; 
-    font-weight: 400; 
-    line-height: 16.90px; 
-    word-wrap: break-word
-  }
-  .service-name2{
-    left: 84px; 
-    top: 241px; 
-    position: absolute; 
-    color: black; 
-    font-size: 18px; 
-    font-family: Montserrat; 
-    font-weight: 400; 
-    line-height: 16.90px; 
-    word-wrap: break-word
-  }
-  .brow-bar{
-    left: 106px; 
-    top: 241px; 
-    position: absolute; 
-    color: black; 
-    font-size: 18px; 
-    font-family: Montserrat; 
-    font-weight: 400; 
-    line-height: 16.90px; 
-    word-wrap: break-word
-  }
-  .container3 {
-    width: 798px;
-    height: 647px;
-    top:1300px;
-    left: 350px;
-    position: absolute;
-  }
-  
-  .title2 {
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    color: #EFB7B7;
-    font-size: 48px;
-    font-family: Kudryashev Display;
-    font-weight: 400;
-    line-height: 45.07px;
-    word-wrap: break-word;
-  }
-  
-  .image1 {
-    width: 286px;
-    height: 250px;
-    left: 2px;
-    top: 127px;
-    position: absolute;
-  }
-  
-  .image2 {
-    width: 286px;
-    height: 250px;
-    left: 512px;
-    top: 397px;
-    position: absolute;
-  }
-  
-  .image3 {
-    width: 490px;
-    height: 250px;
-    left: 2px;
-    top: 397px;
-    position: absolute;
-  }
-  
-  .image4 {
-    width: 490px;
-    height: 250px;
-    left: 308px;
-    top: 127px;
-    position: absolute;
-  }
-  
-  .Rectangle10 {
-    width: 490px;
-    height: 250px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-  }
- 
-  .component4 {
-    width: 857px;
-    height: 362px;
-    top: 2000px;
-    left: 350px;
-    position: absolute;
-  }
-  
-  .title3 {
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    color: #EFB7B7;
-    font-size: 40px;
-    font-family: Kudryashev Display;
-    font-weight: 400;
-    line-height: 45.07px;
-    word-wrap: break-word;
-  }
-  
-  
-  .experience {
-    left: 512px;
-    top: 64px;
-    position: absolute;
-    color: black;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-weight: 400;
-    line-height: 12.75px;
-    word-wrap: break-word;
-  }
-  
-  .description {
-    width: 286px;
-    height: 157px;
-    left: 512px;
-    top: 90px;
-    position: absolute;
-    color: black;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-weight: 400;
-    line-height: 16.23px;
-    word-wrap: break-word;
-  }
-  
-  .name {
-    left: 512px;
-    top: 0px;
-    position: absolute;
-    color: #EFB7B7;
-    font-size: 28px;
-    font-family: Kudryashev Display;
-    font-weight: 400;
-    line-height: 27.82px;
-    word-wrap: break-word;
-  }
-  
-  .arrow {
-    width: 21px;
-    height: 0px;
-    left: 221px;
-    top: 207px;
-    position: absolute;
-    background: #DDC8C8;
-  }
-  
-  .service {
-    width: 223px;
-    height: 21px;
-    left: 45px;
-    position: absolute;
-    color: black;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-weight: 400;
-    line-height: 16.23px;
-    word-wrap: break-word;
-  }
-  .service:hover{
-    width: 223px;
-    height: 21px;
-    left: 45px;
-    position: absolute;
-    color: #DDC8C8;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-weight: 400;
-    line-height: 16.23px;
-    word-wrap: break-word;
-  }
-  
-  .photo {
-    width: 204px;
-    height: 288px;
-    left: 288px;
-    top: 0px;
-    position: absolute;
-  }
-  
-  .divider {
-    width: 0px;
-    height: 87px;
-    left: 857px;
-    top: 99px;
-    position: absolute;
-  }
-  
-  .button {
-    width: 160px;
-    height: 40px;
-    left: 310px;
-    top: 322px;
-    position: absolute;
-    background: #EFB7B7; 
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30); 
-    border-radius: 30px
-  }
-  
-  .inner {
-    width: 139.65px; 
-    height: 18.38px; 
-    left: 10.20px; 
-    top: 10.81px;
-    position: absolute; 
-    text-align: center; 
-    color: black; 
-    font-size: 15px; 
-    font-family: Montserrat; 
-    font-weight: 400; 
-    line-height: 17.39px; 
-    word-wrap: break-word
-  }
+}
 
-  .contact-container {
-    width: 818px;
-    height: 280px;
-    top: 2450px;
-    left: 350px;
-    position: absolute;
-  }
-  
-  .contact-title {
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    color: #EFB7B7;
-    font-size: 48px;
-    font-family: Kudryashev Display;
-    font-weight: 400;
-    line-height: 45.07px;
-    word-wrap: break-word;
-  }
-  
-  .contact-image {
-    width: 428px;
-    height: 280px;
-    left: 390px;
-    top: 0px;
-    position: absolute;
-    border: 6px #EFB7B7 solid;
-  }
-  
-  .contact-address {
-    width: 154px;
-    height: 50px;
-    left: 0px;
-    top: 175px;
-    position: absolute;
-  }
-  
-  .contact-info {
-    color: black;
-    font-size: 16px;
-    font-family: Montserrat;
-  }
-  
-  .contact-schedule {
-    width: 130px;
-    height: 47px;
-    left: 0px;
-    top: 72px;
-    position: absolute;
-  }
-  
-  .contact-phone {
-    width: 135px;
-    height: 47px;
-    left: 186px;
-    top: 72px;
-    position: absolute;
-  }
-  
-  .footer-container {
-    width: 100%;
-    height: 50px;
-    left: 0px;
-    top:2800px;
-    position: absolute;
-  }
-  
-  .rectangle {
-    width: 100%;
-    height: 50px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    background: white;
-  }
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .modal-content1 {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 350px;
-  }
-  
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .AV{
-    color: #EFB7B7; 
-    font-size: 32px; 
-    font-family: Kudryashev Display; 
-    font-weight: 500; 
-    word-wrap: break-word
-  }
-  .LP{
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    font-size: 1.2rem;
-    margin: 0 auto;
-    padding: 1.5rem 1.5rem;
-    border-radius: 0.2rem;
-    background-color: rgb(255, 255, 255);
-    border: none;
-    width: 90%;
-    display: block;
-    border-bottom: 0.3rem solid transparent;
-    transition: all 0.3s;
-    height: 1rem;
-  }
-.AVbutton{
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #EFB7B7;
-  color: white;
+.Rectangle32 {
+  width: 388px;
+  height: 230px;
+  left: 0px;
+  top: 0px;
+  position: absolute
+}
+
+.Rectangle31 {
+  width: 388px;
+  height: 230px;
+  left: 0px;
+  top: 0px;
+  position: absolute
+}
+
+.category1 {
+  width: 388px;
+  height: 42px;
+  left: 0px;
+  top: 230px;
+  position: absolute;
+  background: white
+}
+
+.category2 {
+  width: 388px;
+  height: 42px;
+  left: 0px;
+  top: 230px;
+  position: absolute;
+  background: white
+}
+
+.category3 {
+  width: 388px;
+  height: 42px;
+  left: 0px;
+  top: 230px;
+  position: absolute;
+  background: white
+}
+
+.category1:hover {
+  width: 388px;
+  height: 42px;
+  left: 0px;
+  top: 230px;
+  position: absolute;
+  background: #EFB7B7
+}
+
+.category2:hover {
+  width: 388px;
+  height: 42px;
+  left: 0px;
+  top: 230px;
+  position: absolute;
+  background: #EFB7B7
+}
+
+.category3:hover {
+  width: 388px;
+  height: 42px;
+  left: 0px;
+  top: 230px;
+  position: absolute;
+  background: #EFB7B7
+}
+
+.nail-bar {
+  left: 159px;
+  top: 241px;
+  position: absolute;
+  color: black;
+  font-size: 18px;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 16.90px;
+  word-wrap: break-word
+}
+
+.service-name2 {
+  left: 84px;
+  top: 241px;
+  position: absolute;
+  color: black;
+  font-size: 18px;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 16.90px;
+  word-wrap: break-word
+}
+
+.brow-bar {
+  left: 106px;
+  top: 241px;
+  position: absolute;
+  color: black;
+  font-size: 18px;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 16.90px;
+  word-wrap: break-word
+}
+
+.container3 {
+  width: 798px;
+  height: 647px;
+  top: 1250px;
+  left: 350px;
+  position: absolute;
+}
+
+.title2 {
+  left: 30%;
+  top: 0px;
+  position: absolute;
+  color: #EFB7B7;
+  font-size: 48px;
+  font-family: Kudryashev Display;
+  font-weight: 400;
+  line-height: 45.07px;
+  text-align: center;
+}
+
+.image1 {
+  width: 286px;
+  height: 250px;
+  left: 2px;
+  top: 90px;
+  position: absolute;
+}
+
+.image2 {
+  width: 286px;
+  height: 250px;
+  left: 512px;
+  top: 360px;
+  position: absolute;
+}
+
+.image3 {
+  width: 490px;
+  height: 250px;
+  left: 2px;
+  top: 360px;
+  position: absolute;
+}
+
+.image4 {
+  width: 490px;
+  height: 250px;
+  left: 308px;
+  top: 90px;
+  position: absolute;
+}
+
+.Rectangle10 {
+  width: 490px;
+  height: 250px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.component4 {
+  width: 857px;
+  height: 362px;
+  top: 1930px;
+  left: 350px;
+  position: absolute;
+}
+
+.title3 {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  color: #EFB7B7;
+  font-size: 40px;
+  font-family: Kudryashev Display;
+  font-weight: 400;
+  line-height: 45.07px;
+  word-wrap: break-word;
+}
+
+
+.experience {
+  left: 512px;
+  top: 64px;
+  position: absolute;
+  color: black;
   font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 12.75px;
+  word-wrap: break-word;
+}
+
+.description {
+  width: 286px;
+  height: 157px;
+  left: 512px;
+  top: 90px;
+  position: absolute;
+  color: black;
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 16.23px;
+  word-wrap: break-word;
+}
+
+.name {
+  left: 512px;
+  top: 0px;
+  position: absolute;
+  color: #EFB7B7;
+  font-size: 28px;
+  font-family: Kudryashev Display;
+  font-weight: 400;
+  line-height: 27.82px;
+  word-wrap: break-word;
+}
+
+.arrow {
+  width: 21px;
+  height: 0px;
+  left: 221px;
+  top: 207px;
+  position: absolute;
+  background: #DDC8C8;
+}
+
+.service {
+  width: 223px;
+  height: 21px;
+  left: 45px;
+  position: absolute;
+  color: black;
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 16.23px;
+  word-wrap: break-word;
+}
+
+.service:hover {
+  width: 223px;
+  height: 21px;
+  left: 45px;
+  position: absolute;
+  color: #DDC8C8;
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 16.23px;
+  word-wrap: break-word;
+}
+
+.photo {
+  width: 204px;
+  height: 288px;
+  left: 288px;
+  top: 0px;
+  position: absolute;
+}
+
+.divider {
+  width: 0px;
+  height: 87px;
+  left: 857px;
+  top: 99px;
+  position: absolute;
+}
+
+.button {
+  left: 310px;
+  top: 322px;
+  width: 160px;
+  height: 40px;
+  position: relative;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
+  background: #ffcccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.inner {
+  width: 139.65px;
+  height: 18.38px;
+  left: 10.20px;
+  top: 10.81px;
+  text-align: center; 
+  color: black; 
+  font-size: 15px; 
+  font-family: Montserrat; 
+  font-weight: 400; 
+  line-height: 17.39px; 
+  word-wrap: break-word;
+}
+
+.contact-container {
+  width: 818px;
+  height: 280px;
+  top: 2360px;
+  left: 350px;
+  position: absolute;
+}
+
+.contact-title {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  color: #EFB7B7;
+  font-size: 48px;
+  font-family: Kudryashev Display;
+  font-weight: 400;
+  line-height: 45.07px;
+  word-wrap: break-word;
+}
+
+.contact-image {
+  width: 428px;
+  height: 280px;
+  left: 390px;
+  top: 0px;
+  position: absolute;
+  border: 6px #EFB7B7 solid;
+}
+
+.contact-address {
+  width: 154px;
+  height: 50px;
+  left: 0px;
+  top: 175px;
+  position: absolute;
+}
+
+.contact-info {
+  color: black;
+  font-size: 16px;
+  font-family: Montserrat;
+}
+
+.contact-schedule {
+  width: 130px;
+  height: 47px;
+  left: 0px;
+  top: 72px;
+  position: absolute;
+}
+
+.contact-phone {
+  width: 135px;
+  height: 47px;
+  left: 186px;
+  top: 72px;
+  position: absolute;
+}
+
+.footer-container {
+  width: 100%;
+  height: 50px;
+  left: 0px;
+  top: 2720px;
+  position: absolute;
+}
+
+.rectangle {
+  width: 100%;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content1 {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 350px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.AV {
+  color: #EFB7B7;
+  font-size: 32px;
+  font-family: Kudryashev Display;
+  font-weight: 500;
+  word-wrap: break-word
+}
+
+.LP {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 90%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+  height: 1rem;
+}
+
+.AVbutton {
+  width: 160px;
+  height: 40px;
+  position: relative;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
+  background: #ffcccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   margin-right: 10px;
+  border: none;
+  font-size: 15px; 
+  font-family: Montserrat; 
 }
-.AVbutton:hover {
-  background-color: #ad8080;
-}
+
 .container {
   display: flex;
   justify-content: center;
@@ -740,7 +777,7 @@ background: white
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 350px;
+  width: 370px;
   height: 580px;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
@@ -753,7 +790,8 @@ background: white
   width: 100%;
   height: 100%;
 }
-.authentication{
+
+.authentication {
   align-items: center;
   position: absolute;
   left: 93%;
@@ -761,16 +799,19 @@ background: white
 }
 
 .authentication img {
-  width: 30px; 
-  height: auto; 
+  width: 30px;
+  height: auto;
   margin-left: 10px;
 }
-.password3{
+
+.password3 {
   color: #EFB7B7;
-  font-size: 16px;
+  font-size: 18px; 
+  font-family: Montserrat; 
   margin-top: 10px;
   margin-left: 60px;
 }
+
 .modalrecovery {
   display: none;
   position: fixed;
@@ -790,16 +831,21 @@ background: white
   border: 1px solid #888;
   width: 350px;
 }
-.AVbutton2{
-  padding: 10px 20px;
-  border: none;
+
+.AVbutton2 {
+  width: 160px;
+  height: 40px;
+  position: relative;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
+  background: #ffcccc;
   border-radius: 5px;
-  background-color: #EFB7B7;
-  color: white;
-  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   margin-left: 80px;
 }
+
 .modalpassword {
   display: none;
   position: fixed;
@@ -819,17 +865,20 @@ background: white
   border: 1px solid #888;
   width: 350px;
 }
+
 .info img {
-  width: 30px; 
-  height: auto; 
+  width: 30px;
+  height: auto;
   margin-left: 10px;
 }
-.info{
+
+.info {
   align-items: center;
   position: absolute;
   left: 97%;
   top: 25%;
 }
+
 .mymodal {
   display: none;
   position: fixed;
@@ -839,7 +888,7 @@ background: white
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .mymodal-content {
@@ -865,468 +914,514 @@ background: white
 }
 
 @media (max-width: 500px) {
-  .photo1{
+  .photo1 {
     width: 100%;
     margin-left: -2.5%;
     top: 70px;
   }
-  .img1{
-    width: 300px;
+
+  .img1 {
+    width: 70%;
   }
-  .address{
+
+  .address {
     display: none;
   }
-  .phone{
+
+  .phone {
     display: none;
   }
-  .time{
+
+  .time {
     display: none;
   }
-  .logo2{
-font-size: 16px;
-left: 70px;
-width: 60%;
-top:15px
+
+  .logo2 {
+    font-size: 16px;
+    left: 70px;
+    width: 60%;
+    top: 15px
   }
-  .navbar{
+
+  .navbar {
     width: 100%;
     left: 0;
   }
+
   .navbar .menu-items li {
     margin-bottom: 0.5rem;
     font-size: 0.5rem;
     font-weight: 200;
     font-family: Luminari;
   }
-  .container3{
+
+  .container3 {
     left: 20px;
     width: 100%;
   }
-  .container2{
+
+  .container2 {
     left: 20px;
-    margin-top: -330px;
+    margin-top: -360px;
     width: 100%;
   }
-  .title{
+
+  .title {
     font-size: 18px;
     line-height: 15.07px;
-    left: 5%;
   }
-  .authentication{
+
+  .authentication {
     align-items: center;
     position: absolute;
     left: 75%;
     top: 25%;
   }
+
   .service-box1 {
-    width: 150px; 
-    height:80px; 
-    left: 22px; 
-    top: 100px; 
+    width: 150px;
+    height: 80px;
+    left: 22px;
+    top: 90px;
     position: absolute
-    }
-    
-    .Rectangle29 {
-    width: 150px; 
-    height:80px; 
-    left: 40%; 
-    top: -65%; 
+  }
+
+  .Rectangle29 {
+    width: 150px;
+    height: 80px;
+    left: 40%;
+    top: -65%;
     position: absolute
-    }
-    
-    .Rectangle33 {
-    width: 150px; 
-    height: 20px; 
-    left: 40%; 
-    top: 28px; 
-    position: absolute; 
+  }
+
+  .Rectangle33 {
+    width: 150px;
+    height: 20px;
+    left: 40%;
+    top: 28px;
+    position: absolute;
     background: white
-    }
-    
-    .service-name1 {
-      left: 60px;
-      top: 32px;
-      position: absolute;
-      text-align: center;
-      color: black;
-      font-size: 9px;
-      font-family: Montserrat;
-      line-height: 10.90px;
-      word-wrap: break-word;
-      width: 150px;
-    }
-    .Rectangle33:hover{
-      width: 150px; 
-      height: 20px; 
-      left: 40%; 
-      top: 0; 
-      position: absolute; 
-      background: #EFB7B7
-    }
-    .service-box2 {
-      width: 150px; 
-      height:80px; 
-      left: 22px; 
-      top: 130px; 
-      position: absolute
-    }
-    .service-box3 {
-      width: 150px; 
-      height:80px; 
-      left: 82px; 
-      top: 315px; 
-      position: absolute
-    }
-    .service-box4 {
-      width: 150px; 
-      height:80px; 
-      left: 2px; 
-      top: 413px; 
-      position: absolute
-    }
-    
-    .Rectangle30 {
-      width: 150px; 
-      height:80px; 
-      left: 40%;
-      top: 30px; 
-      position: absolute
-      }
-    .Rectangle32 {
-      width: 150px; 
-      height:80px;  
-      left: 0;
-      top: -50%; 
-      position: absolute
-      }
-    .Rectangle31 {
-      width: 150px; 
-      height:80px;  
-      left: 80px;
-      top: -45px; 
-      position: absolute
-      }
-      .category1{
-        width: 150px; 
-        height: 20px;
-        left: 40%; 
-        top: 110px; 
-        position: absolute; 
-        background: white   
-      }
-      .category2{
-        width: 150px; 
-        height: 20px;
-        left: 0; 
-        top: 20px; 
-        position: absolute; 
-        background: white
-      }
-      .category3{
-        width: 150px; 
-        height: 20px;
-        left: 80px; 
-        top: 35px; 
-        position: absolute; 
-        background: white
-      }
-      .category1:hover{
-        width: 150px; 
-        height: 20px;
-        left: 40%; 
-        top: 110px; 
-        position: absolute; 
-        background: #EFB7B7 
-      }
-      .category2:hover{
-        width: 150px; 
-        height: 20px;
-        left: 0; 
-        top: 20px; 
-        position: absolute;  
-        background: #EFB7B7
-      }
-      .category3:hover{
-        width: 150px; 
-        height: 20px;
-        left: 80px; 
-        top: 35px; 
-        position: absolute; 
-        background: #EFB7B7
-      }
-      .nail-bar{
-        width: 150px; 
-        height: 20px;
-        position: absolute; 
-        color: black; 
-        font-size: 9px; 
-        font-family: Montserrat; 
-        line-height: 10.90px; 
-        word-wrap: break-word;
-        top: 115px;
-        left: 115px;
-      }
-      .service-name2{
-        width: 150px; 
-        height: 20px;
-        left: 25px; 
-        top: 25px; 
-        position: absolute; 
-        color: black; 
-        font-size: 9px; 
-        font-family: Montserrat; 
-        line-height: 10.90px; 
-        word-wrap: break-word
-      }
-      .brow-bar{
-        left: 115px; 
-        top: 40px; 
-        position: absolute; 
-        color: black; 
-        font-size: 9px; 
-        font-family: Montserrat; 
-        font-weight: 400; 
-        line-height: 10.90px; 
-        word-wrap: break-word;
-        width: 150px; 
-        height: 20px;
-      }
-      .container3 {
-        width: 100%;
-        top:700px;
-        left: 0px;
-        position: absolute;
-      }
-      .title2{
-        font-size: 18px;
+  }
+
+  .service-name1 {
+    left: 60px;
+    top: 32px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 9px;
+    font-family: Montserrat;
+    line-height: 10.90px;
+    word-wrap: break-word;
+    width: 150px;
+  }
+
+  .Rectangle33:hover {
+    width: 150px;
+    height: 20px;
+    left: 40%;
+    top: 0;
+    position: absolute;
+    background: #EFB7B7
+  }
+
+  .service-box2 {
+    width: 150px;
+    height: 80px;
+    left: 22px;
+    top: 120px;
+    position: absolute
+  }
+
+  .service-box3 {
+    width: 150px;
+    height: 80px;
+    left: 82px;
+    top: 305px;
+    position: absolute
+  }
+
+  .service-box4 {
+    width: 150px;
+    height: 80px;
+    left: 2px;
+    top: 403px;
+    position: absolute
+  }
+
+  .Rectangle30 {
+    width: 150px;
+    height: 80px;
+    left: 40%;
+    top: 30px;
+    position: absolute
+  }
+
+  .Rectangle32 {
+    width: 150px;
+    height: 80px;
+    left: 0;
+    top: -50%;
+    position: absolute
+  }
+
+  .Rectangle31 {
+    width: 150px;
+    height: 80px;
+    left: 80px;
+    top: -45px;
+    position: absolute
+  }
+
+  .category1 {
+    width: 150px;
+    height: 20px;
+    left: 40%;
+    top: 110px;
+    position: absolute;
+    background: white
+  }
+
+  .category2 {
+    width: 150px;
+    height: 20px;
+    left: 0;
+    top: 20px;
+    position: absolute;
+    background: white
+  }
+
+  .category3 {
+    width: 150px;
+    height: 20px;
+    left: 80px;
+    top: 35px;
+    position: absolute;
+    background: white
+  }
+
+  .category1:hover {
+    width: 150px;
+    height: 20px;
+    left: 40%;
+    top: 110px;
+    position: absolute;
+    background: #EFB7B7
+  }
+
+  .category2:hover {
+    width: 150px;
+    height: 20px;
+    left: 0;
+    top: 20px;
+    position: absolute;
+    background: #EFB7B7
+  }
+
+  .category3:hover {
+    width: 150px;
+    height: 20px;
+    left: 80px;
+    top: 35px;
+    position: absolute;
+    background: #EFB7B7
+  }
+
+  .nail-bar {
+    width: 150px;
+    height: 20px;
+    position: absolute;
+    color: black;
+    font-size: 9px;
+    font-family: Montserrat;
+    line-height: 10.90px;
+    word-wrap: break-word;
+    top: 115px;
+    left: 115px;
+  }
+
+  .service-name2 {
+    width: 150px;
+    height: 20px;
+    left: 25px;
+    top: 25px;
+    position: absolute;
+    color: black;
+    font-size: 9px;
+    font-family: Montserrat;
+    line-height: 10.90px;
+    word-wrap: break-word
+  }
+
+  .brow-bar {
+    left: 115px;
+    top: 40px;
+    position: absolute;
+    color: black;
+    font-size: 9px;
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 10.90px;
+    word-wrap: break-word;
+    width: 150px;
+    height: 20px;
+  }
+
+  .container3 {
+    width: 100%;
+    top: 680px;
+    left: 0px;
+    position: absolute;
+  }
+
+  .title2 {
+    font-size: 18px;
+    line-height: 15.07px;
+  }
+
+  .image1 {
+    width: 95px;
+    height: 83px;
+    left: 50px;
+    top: 40px;
+    position: absolute;
+  }
+
+  .image2 {
+    width: 95px;
+    height: 83px;
+    left: 220px;
+    top: 130px;
+    position: absolute;
+  }
+
+  .image3 {
+    width: 163px;
+    height: 83px;
+    left: 50px;
+    top: 130px;
+    position: absolute;
+  }
+
+  .image4 {
+    width: 163px;
+    height: 83px;
+    left: 140px;
+    top: 0px;
+    position: absolute;
+  }
+
+  .Rectangle10 {
+    width: 163px;
+    height: 83px;
+    left: 7%;
+    top: 40px;
+    position: absolute;
+  }
+
+  .component4 {
+    width: 100%;
+    height: 362px;
+    top: 930px;
+    left: 0px;
+    position: absolute;
+  }
+
+  .title3 {
+    font-size: 18px;
     line-height: 15.07px;
     left: 10%;
-      }
-      .image1 {
-        width: 95px;
-        height: 83px;
-        left: 50px;
-        top: 40px;
-        position: absolute;
-      }
-      
-      .image2 {
-        width: 95px;
-        height: 83px;
-        left: 220px;
-        top: 130px;
-        position: absolute;
-      }
-      
-      .image3 {
-        width: 163px;
-        height: 83px;
-        left: 50px;
-        top: 130px;
-        position: absolute;
-      }
-      
-      .image4 {
-        width: 163px;
-        height: 83px;
-        left: 140px;
-        top: 0px;
-        position: absolute;
-      }
-      .Rectangle10 {
-        width: 163px;
-        height: 83px;
-        left: 7%;
-        top: 40px;
-        position: absolute;
-      }
- 
-      .component4 {
-        width: 100%;
-        height: 362px;
-        top: 930px;
-        left: 0px;
-        position: absolute;
-      }
-      .title3 {
-        font-size: 18px;
-        line-height: 15.07px;
-        left: 10%;
-      }
-      .modal-content{
-        width: 70%;
-      }
+  }
 
-      .photo {
-        width: 68px;
-        height: 96px;
-        left: 140px;
-        top: 35px;
-        position: absolute;
-      }
-      .service {
-        width: 90px;
-        height: 8px;
-        left: 20px;
-        position: absolute;
-        color: black;
-        font-size: 8px;
-        font-family: Montserrat;
-        font-weight: 400;
-        line-height: 9.23px;
-        word-wrap: break-word;
-      }
-      .service:hover{
-        width: 90px;
-        height: 8px;
-        left: 20px;
-        position: absolute;
-        color: #DDC8C8;
-        font-size: 8px;
-        font-family: Montserrat;
-        font-weight: 400;
-        line-height: 9.23px;
-        word-wrap: break-word;
-      }
-      #manicure{
-        top:-110px;
-      }
-      #Paric{
-        top:-90px;
-      }
-      #MakeUp{
-        top:-100px;
-      }
-      #epilation{
-        top:-120px;
-      }
-      .experience {
-        left: 212px;
-        top: 60px;
-        font-size: 8px;
-        line-height: 9.75px;
-      }
-      
-      .description {
-        width: 140px;
-        height: 157px;
-        left: 212px;
-        top: 75px;
-        position: absolute;
-        color: black;
-        font-size: 8px;
-        font-family: Montserrat;
-        font-weight: 400;
-        line-height: 9.23px;
-        word-wrap: break-word;
-      }
-      
-      .name {
-        left: 212px;
-        top: 32px;
-        width: 140px;
-        color: #EFB7B7;
-        font-size: 12px;
-        line-height: 12.82px;
-        word-wrap: break-word;
-      }
-      .button {
-        width: 60px;
-        height: 20px;
-        left: 145px;
-        top: 152px;
-      }
-      
-      .inner {
-        width: 58.65px; 
-        height: 18.38px; 
-        left: 0px; 
-        top: 5px;
-        position: absolute; 
-        text-align: center; 
-        color: black; 
-        font-size: 8px; 
-        line-height: 9.39px; 
-      }
-      .contact-container {
-        width: 350px;
-        top: 1120px;
-        left: 0;
-      }
-      
-      .contact-title {
-        font-size: 18px;
-        line-height: 15.07px;
-        left: 10%;
-      }
-      
-      .contact-image {
-        width: 150px;
-        height: 100px;
-        left: 190px;
-        top: 40px;
-        position: absolute;
-        border: 2px #EFB7B7 solid;
-      }
-      
-      .contact-address {
-        width: 154px;
-        height: 50px;
-        left: 12.5%;
-        top: 115px;
-        position: absolute;
-      }
-      
-      .contact-info {
-        color: black;
-        font-size: 8px;
-        font-family: Montserrat;
-        left: 12.5%;
-      }
-      
-      .contact-schedule {
-        width: 130px;
-        height: 47px;
-        left: 12.5%;;
-        top: 42px;
-        position: absolute;
-      }
-      
-      .contact-phone {
-        width: 135px;
-        height: 47px;
-        left: 12.5%;;
-        top: 78px;
-        position: absolute;
-      }
-      
-      .footer-container {
-        width: 100%;
-        height: 40px;
-        left: 0px;
-        top: 1280px;
-        position: absolute;
-      }
-      
-      .rectangle {
-        width: 100%;
-        height: 40px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        background: white;
-      }
-      
-      .logo {
-        font-size: 16px;
-        left: 120px;
-        width: 60%;
-        top: 8px;
-      }
-      .info{
-        align-items: center;
-        position: absolute;
-        left: 86%;
-        top: 25%;
-      }
-    }
+  .modal-content {
+    width: 70%;
+  }
+
+  .photo {
+    width: 68px;
+    height: 96px;
+    left: 140px;
+    top: 35px;
+    position: absolute;
+  }
+
+  .service {
+    width: 90px;
+    height: 8px;
+    left: 20px;
+    position: absolute;
+    color: black;
+    font-size: 8px;
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 9.23px;
+    word-wrap: break-word;
+  }
+
+  .service:hover {
+    width: 90px;
+    height: 8px;
+    left: 20px;
+    position: absolute;
+    color: #DDC8C8;
+    font-size: 8px;
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 9.23px;
+    word-wrap: break-word;
+  }
+
+  #manicure {
+    top: -110px;
+  }
+
+  #Paric {
+    top: -90px;
+  }
+
+  #MakeUp {
+    top: -100px;
+  }
+
+  #epilation {
+    top: -120px;
+  }
+
+  .experience {
+    left: 212px;
+    top: 60px;
+    font-size: 8px;
+    line-height: 9.75px;
+  }
+
+  .description {
+    width: 140px;
+    height: 157px;
+    left: 212px;
+    top: 75px;
+    position: absolute;
+    color: black;
+    font-size: 8px;
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 9.23px;
+    word-wrap: break-word;
+  }
+
+  .name {
+    left: 212px;
+    top: 32px;
+    width: 140px;
+    color: #EFB7B7;
+    font-size: 12px;
+    line-height: 12.82px;
+    word-wrap: break-word;
+  }
+
+  .button {
+    width: 75px;
+    height: 20px;
+    left: 145px;
+    top: 152px;
+  }
+
+  .inner {
+    width: 58.65px;
+    height: 12.38px;
+    text-align: center; 
+  color: black; 
+  font-size: 9px; 
+  font-family: Montserrat; 
+  font-weight: 100; 
+  line-height: 10.39px; 
+  word-wrap: break-word;
+  }
+
+  .contact-container {
+    width: 350px;
+    top: 1120px;
+    left: 0;
+  }
+
+  .contact-title {
+    font-size: 18px;
+    line-height: 15.07px;
+    left: 10%;
+  }
+
+  .contact-image {
+    width: 150px;
+    height: 100px;
+    left: 190px;
+    top: 40px;
+    position: absolute;
+    border: 2px #EFB7B7 solid;
+  }
+
+  .contact-address {
+    width: 154px;
+    height: 50px;
+    left: 12.5%;
+    top: 115px;
+    position: absolute;
+  }
+
+  .contact-info {
+    color: black;
+    font-size: 8px;
+    font-family: Montserrat;
+    left: 12.5%;
+  }
+
+  .contact-schedule {
+    width: 130px;
+    height: 47px;
+    left: 12.5%;
+    ;
+    top: 42px;
+    position: absolute;
+  }
+
+  .contact-phone {
+    width: 135px;
+    height: 47px;
+    left: 12.5%;
+    ;
+    top: 78px;
+    position: absolute;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: 40px;
+    left: 0px;
+    top: 1280px;
+    position: absolute;
+  }
+
+  .rectangle {
+    width: 100%;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: white;
+  }
+
+  .logo {
+    font-size: 16px;
+    left: 120px;
+    width: 60%;
+    top: 8px;
+  }
+
+  .info {
+    align-items: center;
+    position: absolute;
+    left: 86%;
+    top: 25%;
+  }
+  .modal-content{
+    width: 70%;
+  }
+}

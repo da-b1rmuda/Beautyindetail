@@ -93,24 +93,10 @@
   <div class="modal-content">
     <span class="close" id="closeModal">&times;</span>
     <h1 class="title2">Добавление</h1><br>
-    <table>
-      <tr>
-        <td><label class="text" for="name">Наименование:</label></td>
-        <td><input type="text" id="name1"></td>
-      </tr>
-      <tr>
-        <td><label class="text" for="time">Время:</label></td>
-        <td><input type="text" id="time1"></td>
-      </tr>
-      <tr>
-        <td><label class="text" for="price">Стоимость:</label></td>
-        <td><input type="text" id="price1"></td>
-      </tr>
-      <tr>
-        <td><label class="text" for="text">Категория услуг:</label></td>
-        <td><select class="select" id="services1"></select> </td>
-      </tr>
-    </table>
+    <input id="name1" class="LP" type="text" placeholder="Наименование:">
+    <input id="time1" class="LP" type="text" placeholder="Время:">
+    <input id="price1" class="LP" type="text" placeholder="Стоимость:">
+    <select class="LPselect" id="services1"> <option value="" selected disabled>Выберите категорию</option></select>
     <br>
   <div class="button2" id="addRecord">
     <div class="inner2">Добавить</div>
@@ -121,28 +107,11 @@
   <div class="modal-content">
     <span class="close" id="closeRedModal">&times;</span>
     <h1 class="title2">Изменение</h1><br>
-    <table>
-      <tr>
-        <td><label class="text" for="id">Id:</label></td>
-        <td><input type="text" id="id"></td>
-      </tr>
-      <tr>
-        <td><label class="text" for="name">Наименование:</label></td>
-        <td><input type="text" id="name"></td>
-      </tr>
-      <tr>
-        <td><label class="text" for="time">Время:</label></td>
-        <td><input type="text" id="time"></td>
-      </tr>
-      <tr>
-        <td><label class="text" for="price">Стоимость:</label></td>
-        <td><input type="text" id="price"></td>
-      </tr>
-      <tr>
-        <td><label class="text" for="text">Категория услуг:</label></td>
-        <td><select class="select" id="services"></select> </td>
-      </tr>
-    </table>
+    <input id="id" class="LP" type="text" placeholder="Id:">
+    <input id="name" class="LP" type="text" placeholder="Наименование:">
+    <input id="time" class="LP" type="text" placeholder="Время:">
+    <input id="price" class="LP" type="text" placeholder="Стоимость:">
+    <select class="LPselect" id="services"> <option value="" selected disabled>Выберите категорию</option></select>
   <br>
   <div class="button2" id="redRecord">
     <div class="inner2">Изменить</div>
@@ -153,12 +122,7 @@
   <div class="modal-content">
     <span class="close" id="closeDelModal">&times;</span>
     <h1 class="title2">Удаление</h1><br>
-  <table>
-    <tr>
-      <td><label class="text" for="id">Id:</label></td>
-      <td><input type="text" id="id3"></td>
-    </tr>
-  </table>
+    <input id="id3" class="LP" type="text" placeholder="Id:">
   <br>
   <div class="button2" id="delRecord">
     <div class="inner2">Удалить</div>

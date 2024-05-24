@@ -170,7 +170,8 @@ const init = async () => {
 				doc.setFont('times-new-roman-cyr');
 				doc.setFontSize(16);
 
-				doc.text('Отчет прибыли', 70, 10);
+				doc.text('Салон красоты Beauty in detail', 120, 10);
+				doc.text('Отчет прибыли', 85, 20);
 
 				const tableData = [];
 				data.forEach((item) => {
@@ -178,6 +179,7 @@ const init = async () => {
 				});
 
 				doc.autoTable({
+					startY: 25, 
 					head: [['Месяц', 'Прибыль']],
 					body: tableData,
 					didParseCell: function (data) {

@@ -59,11 +59,11 @@ table {
 }
 
 .button {
+  margin-bottom: 10px;
   width: 160px;
   height: 40px;
   position: relative;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30); 
-  margin-bottom: 10px;
   background: #ffcccc;
   border-radius: 5px;
   display: flex;
@@ -128,9 +128,12 @@ font-family: Montserrat;
 }
 
 .button2 {
-  width: 100%;
-  height: 40px;
+  left: 28%;
   margin-bottom: 10px;
+  width: 160px;
+  height: 40px;
+  position: relative;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30); 
   background: #ffcccc;
   border-radius: 5px;
   display: flex;
@@ -140,9 +143,13 @@ font-family: Montserrat;
 }
 
 .inner2 {
-  color: black;
-  font-size: 16px;
+  text-align: center; 
+  color: black; 
+  font-size: 15px; 
   font-family: Montserrat; 
+  font-weight: 400; 
+  line-height: 17.39px; 
+  word-wrap: break-word;
 }
 
 .titleadmin {
@@ -166,10 +173,10 @@ font-family: Montserrat;
   
   .modal-content {
     background-color: #fefefe;
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 350px;
+    width: 400px;
   }
   
   .close {
@@ -204,16 +211,48 @@ font-family: Montserrat;
 }
 
 #download-report-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  width: 160px;
+  height: 40px;
+  position: relative;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30); 
+  background: #ffcccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
 }
 
-#download-report-btn:hover {
-    background-color: #0056b3;
+.LP{
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.0rem;
+  margin: 0 auto;
+  padding: 1.2rem 1.2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 93%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+  height: 1rem;
+}
+.LPselect {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.0rem;
+  margin: 0 auto;
+  padding: 0.6rem 1.0rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 93%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+  height: auto;
 }
 @media (max-width: 500px) {
   body {
@@ -310,12 +349,11 @@ font-family: Montserrat;
     cursor: pointer;
   }
   #download-report-btn {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top:20px
+    top: 20px;
+    width: 110%;
+    height: 20px;
+}
+.modal-content{
+  width: 70%;
 }
 }

@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-	background: #F4F2F3
+  background: #F4F2F3
 }
 
 .container1 {
@@ -16,32 +16,35 @@ body {
 }
 
 .navbar {
-  background: white; 
+  background: white;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.20)
 }
-.address{
-	position: absolute;
+
+.address {
+  position: absolute;
   top: 8px;
   right: 430px;
   font-size: 1.8rem;
   color: #0e2431;
- font-family: Luminari;
+  font-family: Luminari;
 }
-.phone{
-	position: absolute;
+
+.phone {
+  position: absolute;
   top: 8px;
   right: 70px;
   font-size: 1.8rem;
   color: #0e2431;
- font-family: Luminari;
+  font-family: Luminari;
 }
-.time{
-	position: absolute;
+
+.time {
+  position: absolute;
   top: 8px;
   right: 250px;
   font-size: 1.8rem;
   color: #0e2431;
- font-family: Luminari;
+  font-family: Luminari;
 }
 
 .nav-container1 {
@@ -57,7 +60,7 @@ body {
 
 .navbar .nav-container1 li {
   list-style: none;
-  color: #EFB7B7; 
+  color: #EFB7B7;
 }
 
 .a1 {
@@ -76,8 +79,8 @@ body {
   padding: 0.7rem;
 }
 
-.navbar .nav-container1 a:hover{
-    font-weight: bolder;
+.navbar .nav-container1 a:hover {
+  font-weight: bolder;
 }
 
 .nav-container1 {
@@ -146,7 +149,7 @@ body {
   transition: transform 0.5s ease-in-out;
   text-align: center;
   font-family: Luminari;
-	
+
 }
 
 .navbar .menu-items li {
@@ -154,53 +157,60 @@ body {
   font-size: 1.5rem;
   font-weight: 500;
 }
+
 .logo2 {
   position: absolute;
   top: 5px;
   right: 750px;
   font-size: 1.7rem;
-  color:#0e2431;
- font-family: Luminari, fantasy;
+  color: #0e2431;
+  font-family: Luminari, fantasy;
 }
+
 .logo {
   position: absolute;
   top: 5px;
   right: 650px;
   font-size: 1.7rem;
-  color:#0e2431;
- font-family: Luminari, fantasy;
+  color: #0e2431;
+  font-family: Luminari, fantasy;
 }
-.photo1{
+
+.photo1 {
   position: absolute;
   left: 50px;
   top: 80px;
   width: 100%;
 }
-.img1{
-width: 1000px;
+
+.img1 {
+  width: 1000px;
 }
-.nav-container1 input[type="checkbox"]:checked ~ .menu-items {
+
+.nav-container1 input[type="checkbox"]:checked~.menu-items {
   transform: translateX(0);
 }
 
-.nav-container1 input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+.nav-container1 input[type="checkbox"]:checked~.hamburger-lines .line1 {
   transform: rotate(45deg);
 }
 
-.nav-container1 input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+.nav-container1 input[type="checkbox"]:checked~.hamburger-lines .line2 {
   transform: scaleY(0);
 }
 
-.nav-container1 input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+.nav-container1 input[type="checkbox"]:checked~.hamburger-lines .line3 {
   transform: rotate(-45deg);
 }
 
-.nav-container1 input[type="checkbox"]:checked ~ .logo{
+.nav-container1 input[type="checkbox"]:checked~.logo {
   display: none;
 }
-.nav-container1 input[type="checkbox"]:checked ~ .photo1 {
+
+.nav-container1 input[type="checkbox"]:checked~.photo1 {
   display: none;
 }
+
 .contact-container {
   width: 818px;
   height: 280px;
@@ -259,6 +269,7 @@ width: 1000px;
   top: 72px;
   position: absolute;
 }
+
 .footer-container {
   width: 100%;
   height: 50px;
@@ -275,33 +286,40 @@ width: 1000px;
   position: absolute;
   background: white;
 }
+
 .button {
-  width: 160px;
-  height: 40px;
   left: 310px;
   top: 622px;
-  position: absolute;
-  background: #EFB7B7; 
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30); 
-  border-radius: 30px
+  width: 160px;
+  height: 40px;
+  position: relative;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
+  background: #ffcccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .inner {
-  width: 139.65px; 
-  height: 18.38px; 
-  left: 10.20px; 
+  width: 139.65px;
+  height: 18.38px;
+  left: 10.20px;
   top: 10.81px;
-  position: absolute; 
-  text-align: center; 
-  color: black; 
-  font-size: 15px; 
-  font-family: Montserrat; 
-  font-weight: 400; 
-  line-height: 17.39px; 
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 17.39px;
   word-wrap: break-word
 }
+
 .modal {
-  display: none; /* Скрываем модальное окно по умолчанию */
+  display: none;
+  /* Скрываем модальное окно по умолчанию */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -333,14 +351,16 @@ width: 1000px;
   text-decoration: none;
   cursor: pointer;
 }
-.AV{
-  color: #EFB7B7; 
-  font-size: 32px; 
-  font-family: Kudryashev Display; 
-  font-weight: 500; 
+
+.AV {
+  color: #EFB7B7;
+  font-size: 32px;
+  font-family: Kudryashev Display;
+  font-weight: 500;
   word-wrap: break-word
 }
-.LP{
+
+.LP {
   font-family: 'Roboto', sans-serif;
   color: #333;
   font-size: 1.2rem;
@@ -355,23 +375,29 @@ width: 1000px;
   transition: all 0.3s;
   height: 1rem;
 }
-.AVbutton{
-padding: 10px 20px;
-border: none;
-border-radius: 5px;
-background-color: #EFB7B7;
-color: white;
-font-size: 16px;
-cursor: pointer;
-margin-right: 10px;
+
+.AVbutton {
+  width: 160px;
+  height: 40px;
+  position: relative;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
+  background: #ffcccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+  border: none;
+  font-size: 15px; 
+  font-family: Montserrat; 
 }
-.AVbutton:hover {
-background-color: #ad8080;
-}
+
 .container {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
 .registrationModal {
   display: none;
   position: fixed;
@@ -392,6 +418,7 @@ justify-content: center;
   width: 100%;
   height: 100%;
 }
+
 #priceListData {
   width: 799px;
   height: 335px;
@@ -400,80 +427,88 @@ justify-content: center;
   position: absolute;
 }
 
-.PriceList{
-  left: 0px; 
+.PriceList {
+  left: 0px;
   top: 15px;
   position: absolute;
   color: #EFB7B7;
-  font-size: 48px; 
+  font-size: 48px;
   font-family: Kudryashev Display;
-  font-weight: 400; 
+  font-weight: 400;
   word-wrap: break-word;
 }
 
-.tab{
-  width: 764px; 
-  height: 322px; 
-  left: 1px; 
-  top: 88px; 
+.tab {
+  width: 764px;
+  height: 322px;
+  left: 1px;
+  top: 88px;
   display: flex;
   flex-direction: row;
   position: absolute;
 }
+
 .tab2 {
-  width: 764px; 
-  height: 50px; 
-  left: 1px; 
-  top: 150px; 
+  width: 764px;
+  height: 50px;
+  left: 1px;
+  top: 130px;
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.nameservice{
-  left: 0px; 
-  top: 0px; 
-  position: absolute;;
+
+.nameservice {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  ;
   color: black;
-  font-size: 20px; 
-  font-family: Montserrat; 
-  font-weight: 500; 
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 500;
   flex: 1;
   flex-direction: column;
   word-wrap: break-word;
 }
 
-.timeservice{
-  left: 511px; 
-  top: 0px; 
-  position: absolute;;
+.timeservice {
+  left: 511px;
+  top: 0px;
+  position: absolute;
+  ;
   color: black;
-  font-size: 20px; 
-  font-family: Montserrat; 
+  font-size: 20px;
+  font-family: Montserrat;
   font-weight: 800;
-  font-weight: 500; 
-  height: 322px; 
+  font-weight: 500;
+  height: 322px;
   flex: 1;
   word-wrap: break-word;
 }
 
-.priceservice{
-  left: 715px; 
-  top: 0px; 
-  position: absolute;;
+.priceservice {
+  left: 715px;
+  top: 0px;
+  position: absolute;
+  ;
   color: black;
-  font-size: 20px; 
-  font-family: Montserrat; 
-  font-weight: 500; 
-  height: 322px; 
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 500;
+  height: 322px;
   flex: 1;
   word-wrap: break-word;
 }
-.password3{
+
+.password3 {
   color: #EFB7B7;
-  font-size: 16px;
+  font-size: 18px; 
+  font-family: Montserrat;
   margin-top: 10px;
   margin-left: 80px;
 }
+
 .modalrecovery {
   display: none;
   position: fixed;
@@ -493,16 +528,20 @@ justify-content: center;
   border: 1px solid #888;
   width: 400px;
 }
-.AVbutton2{
-  padding: 10px 20px;
-  border: none;
+
+.AVbutton2 {
+  width: 160px;
+  height: 40px;
+  position: relative;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
+  background: #ffcccc;
   border-radius: 5px;
-  background-color: #EFB7B7;
-  color: white;
-  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  margin-left: 120px;
 }
+
 .modalpassword {
   display: none;
   position: fixed;
@@ -522,40 +561,49 @@ justify-content: center;
   border: 1px solid #888;
   width: 400px;
 }
+
 @media (max-width: 500px) {
-  .photo1{
+  .photo1 {
     width: 100%;
     margin-left: -8%;
     top: 70px;
   }
-  .img1{
-    width: 300px;
+
+  .img1 {
+    width: 75%;
   }
-  .address{
+
+  .address {
     display: none;
   }
-  .phone{
+
+  .phone {
     display: none;
   }
-  .time{
+
+  .time {
     display: none;
   }
-  .logo2{
-font-size: 16px;
-left: 70px;
-width: 60%;
-top:15px
+
+  .logo2 {
+    font-size: 16px;
+    left: 70px;
+    width: 60%;
+    top: 15px
   }
-  .navbar{
+
+  .navbar {
     width: 100%;
     left: 0;
   }
+
   .navbar .menu-items li {
     margin-bottom: 0.5rem;
     font-size: 0.5rem;
     font-weight: 200;
     font-family: Luminari;
   }
+
   #priceListData {
     width: 300px;
     height: 205px;
@@ -563,159 +611,170 @@ top:15px
     left: 10%;
     position: absolute;
   }
-  .PriceList{
+
+  .PriceList {
     top: 15px;
     color: #EFB7B7;
-    font-size: 18px; 
+    font-size: 18px;
   }
-  
-  .tab{
-    width: 300px; 
-    height: 161px; 
-    left: 1px; 
-    top: 48px; 
+
+  .tab {
+    width: 300px;
+    height: 161px;
+    left: 1px;
+    top: 48px;
     display: flex;
     flex-direction: row;
     position: absolute;
   }
+
   .tab2 {
-    width: 300px; 
-    height: 20px; 
-    left: 1px; 
-    top: 80px; 
+    width: 300px;
+    height: 20px;
+    left: 1px;
+    top: 70px;
     display: flex;
     flex-direction: column;
     position: relative;
   }
-  .nameservice{
-    left: 0px; 
-    top: 0px; 
-    position: absolute;;
+
+  .nameservice {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    ;
     color: black;
-    font-size: 9px; 
-    font-family: Montserrat; 
-    font-weight: 200; 
+    font-size: 9px;
+    font-family: Montserrat;
+    font-weight: 200;
     flex: 1;
     flex-direction: column;
     word-wrap: break-word;
   }
-  
-  .timeservice{
-    left: 141px; 
-    top: 0px; 
-    position: absolute;;
+
+  .timeservice {
+    left: 141px;
+    top: 0px;
+    position: absolute;
+    ;
     color: black;
-    font-size: 9px; 
-    font-family: Montserrat; 
+    font-size: 9px;
+    font-family: Montserrat;
     font-weight: 200;
-    height: 322px; 
+    height: 322px;
     flex: 1;
     word-wrap: break-word;
   }
-  
-  .priceservice{
-    left: 225px; 
-    top: 0px; 
-    position: absolute;;
+
+  .priceservice {
+    left: 225px;
+    top: 0px;
+    position: absolute;
+    ;
     color: black;
-    font-size: 9px; 
-    font-family: Montserrat; 
-    font-weight: 200; 
-    height: 322px; 
+    font-size: 9px;
+    font-family: Montserrat;
+    font-weight: 200;
+    height: 322px;
     flex: 1;
     word-wrap: break-word;
   }
-      .button {
-        width: 60px;
-        height: 20px;
-        left: 120px;
-        top: 202px;
-      }
-      
-      .inner {
-        width: 58.65px; 
-        height: 18.38px; 
-        left: 0px; 
-        top: 5px;
-        position: absolute; 
-        text-align: center; 
-        color: black; 
-        font-size: 8px; 
-        line-height: 9.39px; 
-      }
-      .contact-container {
-        width: 350px;
-        top: 450px;
-        left: 0;
-      }
-      
-      .contact-title {
-        font-size: 18px;
-        line-height: 15.07px;
-        left: 10%;
-      }
-      
-      .contact-image {
-        width: 150px;
-        height: 100px;
-        left: 190px;
-        top: 40px;
-        position: absolute;
-        border: 2px #EFB7B7 solid;
-      }
-      
-      .contact-address {
-        width: 154px;
-        height: 50px;
-        left: 12.5%;
-        top: 115px;
-        position: absolute;
-      }
-      
-      .contact-info {
-        color: black;
-        font-size: 8px;
-        font-family: Montserrat;
-        left: 12.5%;
-      }
-      
-      .contact-schedule {
-        width: 130px;
-        height: 47px;
-        left: 12.5%;;
-        top: 42px;
-        position: absolute;
-      }
-      
-      .contact-phone {
-        width: 135px;
-        height: 47px;
-        left: 12.5%;;
-        top: 78px;
-        position: absolute;
-      }
-      
-      .footer-container {
-        width: 100%;
-        height: 40px;
-        left: 0px;
-        top: 620px;
-        position: absolute;
-      }
-      
-      .rectangle {
-        width: 100%;
-        height: 40px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        background: white;
-      }
-      
-      .logo {
-        font-size: 16px;
-        left: 120px;
-        width: 60%;
-        top: 8px;
-      }
-    }
+
+  .button {
+    width: 60px;
+    height: 20px;
+    left: 120px;
+    top: 202px;
+  }
+
+  .inner {
+    width: 58.65px;
+    height: 18.38px;
+    left: 0px;
+    top: 5px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 8px;
+    line-height: 9.39px;
+  }
+
+  .contact-container {
+    width: 350px;
+    top: 450px;
+    left: 0;
+  }
+
+  .contact-title {
+    font-size: 18px;
+    line-height: 15.07px;
+    left: 12%;
+    top:10px;
+  }
+
+  .contact-image {
+    width: 150px;
+    height: 100px;
+    left: 175px;
+    top: 30px;
+    position: absolute;
+    border: 2px #EFB7B7 solid;
+  }
+
+  .contact-address {
+    width: 154px;
+    height: 50px;
+    left: 12.5%;
+    top: 115px;
+    position: absolute;
+  }
+
+  .contact-info {
+    color: black;
+    font-size: 8px;
+    font-family: Montserrat;
+    left: 12.5%;
+  }
+
+  .contact-schedule {
+    width: 130px;
+    height: 47px;
+    left: 12.5%;
+    ;
+    top: 42px;
+    position: absolute;
+  }
+
+  .contact-phone {
+    width: 135px;
+    height: 47px;
+    left: 12.5%;
+    ;
+    top: 78px;
+    position: absolute;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: 40px;
+    left: 0px;
+    top: 620px;
+    position: absolute;
+  }
+
+  .rectangle {
+    width: 100%;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: white;
+  }
+
+  .logo {
+    font-size: 16px;
+    left: 120px;
+    width: 60%;
+    top: 8px;
+  }
+}

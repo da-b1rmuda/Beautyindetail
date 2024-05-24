@@ -93,40 +93,14 @@
       <div class="modal-content">
         <span class="close" id="closeModal">&times;</span>
         <h1 class="title2">Добавление</h1><br>
-        <table>
-          <tr>
-            <td><label class="text" for="data">Дата:</label></td>
-            <td><input type="text" id="data1"></td>
-          </tr>
-          <tr>
-            <td><label class="text" for="time">Время:</label></td>
-            <td><input type="text" id="time1"></td>
-          </tr>
-          <tr>
-            <td><label class="text" for="text">Категория услуг:</label></td>
-          <td><select class="select" id="category1"></select> </td>
-          </tr>
-          <tr>
-            <td><label class="text" for="text">Наименование услуги:</label></td>
-          <td><select class="select" id="name1"></select> </td>
-          </tr>
-          <tr>
-            <td><label class="text" for="dob">Мастер:</label></td>
-            <td><select class="select" id="master1"></select> </td>
-          </tr>
-          <tr>
-            <td><label class="text" for="idvisitor">Id клиента:</label></td>
-            <td><input type="text" id="idvisitor1"></td>
-          </tr>
-          <tr>
-            <td><label class="text" for="visitor">Клиент:</label></td>
-            <td><input type="text" id="visitor1"></td>
-          </tr>
-          <tr>
-            <td><label class="text" for="phone">Телефон клиента:</label></td>
-            <td><input type="text" id="phone1"></td>
-          </tr>
-        </table>
+        <input id="data1" class="LP" type="date" placeholder="Дата:">
+				<input id="time1" class="LP" type="time" placeholder="Время:">
+				<select class="LPselect" id="category1"> <option value="" selected disabled>Выберите категорию</option></select>
+        <select class="LPselect" id="name1"> <option value="" selected disabled>Выберите услугу</option></select>
+        <select class="LPselect" id="master1"> <option value="" selected disabled>Выберите мастера</option></select>
+				<input id="idvisitor1" class="LP" type="text" placeholder="Id клиента:">
+				<input id="visitor1" class="LP" type="text" placeholder="Клиент:">
+				<input id="phone1" class="LP" type="phone" placeholder="Телефон клиента:">
         <br>
       <div class="button2" id="addRecord">
         <div class="inner2" >Добавить</div>
@@ -137,44 +111,15 @@
       <div class="modal-content">
         <span class="close" id="closeRedModal">&times;</span>
         <h1 class="title2">Изменение</h1><br>
-      <table>
-        <tr>
-          <td><label class="text" for="id">Id:</label></td>
-          <td><input type="text" id="id"></td>
-        </tr>
-        <tr>
-          <td><label class="text" for="data">Дата:</label></td>
-          <td><input type="text" id="data"></td>
-        </tr>
-        <tr>
-          <td><label class="text" for="time">Время:</label></td>
-          <td><input type="text" id="time"></td>
-        </tr>
-        <tr>
-          <td><label class="text" for="text">Категория услуг:</label></td>
-        <td><select class="select" id="category"></select> </td>
-        </tr>
-        <tr>
-          <td><label class="text" for="text">Наименование услуги:</label></td>
-        <td><select class="select" id="name"></select> </td>
-        </tr>
-        <tr>
-          <td><label class="text" for="dob">Мастер:</label></td>
-          <td><select class="select" id="master"></select> </td>
-        </tr>
-        <tr>
-          <td><label class="text" for="idvisitor">Id клиента:</label></td>
-          <td><input type="text" id="idvisitor"></td>
-        </tr>
-        <tr>
-          <td><label class="text" for="visitor">Клиент:</label></td>
-          <td><input type="text" id="visitor"></td>
-        </tr>
-        <tr>
-          <td><label class="text" for="phone">Телефон клиента:</label></td>
-          <td><input type="text" id="phone"></td>
-        </tr>
-      </table>
+        <input id="id" class="LP" type="text" placeholder="Id:">
+        <input id="data" class="LP" type="date" placeholder="Дата:">
+				<input id="time" class="LP" type="time" placeholder="Время:">
+				<select class="LPselect" id="category"> <option value="" selected disabled>Выберите категорию</option></select>
+        <select class="LPselect" id="name"> <option value="" selected disabled>Выберите услугу</option></select>
+        <select class="LPselect" id="master"> <option value="" selected disabled>Выберите мастера</option></select>
+				<input id="idvisitor" class="LP" type="text" placeholder="Id клиента:">
+				<input id="visitor" class="LP" type="text" placeholder="Клиент:">
+				<input id="phone" class="LP" type="phone" placeholder="Телефон клиента:">
       <br>
       <div class="button2" id="redRecord">
         <div class="inner2" >Изменить</div>
@@ -185,12 +130,7 @@
       <div class="modal-content">
         <span class="close" id="closeDelModal">&times;</span>
         <h1 class="title2">Удаление</h1><br>
-      <table>
-        <tr>
-          <td><label class="text" for="id">Id:</label></td>
-          <td><input type="text" id="id3"></td>
-        </tr>
-      </table>
+        <input id="id3" class="LP" type="text" placeholder="Id:">
       <br>
       <div class="button2" id="dellRecord">
         <div class="inner2" >Удалить</div>
