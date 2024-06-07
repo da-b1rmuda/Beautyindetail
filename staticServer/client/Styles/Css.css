@@ -844,6 +844,21 @@ body {
   align-items: center;
   cursor: pointer;
   margin-left: 80px;
+  border: none;
+}
+
+.AVbutton3 {
+  width: 160px;
+  height: 40px;
+  position: relative;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
+  background: #ffcccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
 }
 
 .modalpassword {
