@@ -17,18 +17,19 @@ table {
 #tableContainer {
   display: flex;
   justify-content: center;
+  margin-left: 5%;
 }
 .hamburger-menu{
   display: none;
 }
 #searchInput {
-  width: 1000px;
+  width: 1150px;
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #EFB7B7;
   border-radius: 5px;
   margin-top: 10px;
-  margin-left: 50px;
+  margin-left: 10%;
   height: 40px;
   font-size: 16px;
 }
@@ -54,8 +55,8 @@ table {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  width: 1000px;
-  margin-left: 50px;
+  width: 1150px;
+  margin-left: 10%;
 }
 
 .button {

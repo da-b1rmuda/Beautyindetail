@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Beauty in detail</title>
-		<style type="text/css">
-			@import url('./Styles/Css3.css');
-		</style>
-		<script async src="./Scripts/Record.js"></script>
-		<script src="./Scripts/Http/http.js"></script>
-	</head>
-	<body>
-		<nav>
-			<div class="navbar">
-				<div class="container1 nav-container1">
-					<input class="checkbox" type="checkbox" />
-					<div class="hamburger-lines">
-						<span class="line line1"></span>
-						<span class="line line2"></span>
-						<span class="line line3"></span>
-					</div>
-					<div class="logo2">
-						<h1>Beauty in detail</h1>
-					</div>
-					<div class="address"><a>г. Димитровград, пр. Ленина д.43 </a></div>
-					<div class="phone"><a>+7(937)124-98-63</a></div>
-					<div class="time"><a>Пн-Вс 09:00-18:00</a></div>
-					<div class="menu-items">
-						<li><a href="Beauty in detail.html" class="a1">Главная</a></li>
-					</div>
-					<div class="photo1">
-						<img class="img1" src="Image/Приветсвие.jpg" />
-					</div>
-					<div class="id2"></div>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Beauty in detail</title>
+	<style type="text/css">
+		@import url('./Styles/Css3.css');
+	</style>
+	<script async src="./Scripts/Record.js"></script>
+	<script src="./Scripts/Http/http.js"></script>
+</head>
+
+<body>
+	<nav>
+		<div class="navbar">
+			<div class="container1 nav-container1">
+				<input class="checkbox" type="checkbox" />
+				<div class="hamburger-lines">
+					<span class="line line1"></span>
+					<span class="line line2"></span>
+					<span class="line line3"></span>
 				</div>
+				<div class="logo2">
+					<h1>Beauty in detail</h1>
+				</div>
+				<div class="address"><a>г. Димитровград, пр. Ленина д.43 </a></div>
+				<div class="phone"><a>+7(937)124-98-63</a></div>
+				<div class="time"><a>Пн-Вс 09:00-18:00</a></div>
+				<div class="menu-items">
+					<li><a href="Beauty in detail.html" class="a1">Главная</a></li>
+				</div>
+				<div class="photo1">
+					<img class="img1" src="Image/Приветсвие.jpg" />
+				</div>
+				<div class="id2"></div>
 			</div>
-		</nav>
+		</div>
+	</nav>
+	<div style="display: flex;flex-direction: column;margin-top: 510px;align-items: center;">
 		<div class="container2">
 			<div class="title3" id="titleElement">
 				Свобные окошки
@@ -48,20 +51,16 @@
 			<div class="inner3">Записаться</div>
 		</div>
 		<div class="record" id="record">
-			<a class="category">Категория </a
-			><select id="categorySelect">
+			<a class="category">Категория </a><select id="categorySelect">
 				<option>--Выберите категорию--</option>
 			</select>
-			<a class="category">Услуга </a
-			><select id="serviceSelect">
+			<a class="category">Услуга </a><select id="serviceSelect">
 				<option>--Выберите услугу--</option>
 			</select>
-			<a class="category">День </a
-			><select id="daySelect">
+			<a class="category">День </a><select id="daySelect">
 				<option>--Выберите день--</option>
 			</select>
-			<a class="category">Время </a
-			><select id="timeSelect">
+			<a class="category">Время </a><select id="timeSelect">
 				<option>--Выберите время--</option>
 			</select>
 			<br />
@@ -86,35 +85,38 @@
 				<div class="inner">Отменить запись</div>
 			</div>
 		</div>
+	</div>
+	<div class="modal" id="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<p class="AV">Подтвердите запись</p>
+			<p class="services">Услуга</p>
+			<p class="master"></p>
+			<p class="day"></p>
+			<p class="time2"></p>
+			<div class="Zbutton" id="submitBtn">Записаться</div>
+		</div>
+	</div>
 
-		<div class="modal" id="modal">
-			<div class="modal-content">
-				<span class="close" onclick="closeModal()">&times;</span>
-				<p class="AV">Подтвердите запись</p>
-				<p class="services">Услуга</p>
-				<p class="master"></p>
-				<p class="day"></p>
-				<p class="time2"></p>
-				<div class="Zbutton" id="submitBtn">Записаться</div>
+	<div class="footer-container">
+		<div class="rectangle"></div>
+		<div class="logo">
+			<h3>Beauty in detail</h3>
+		</div>
+	</div>
+	<div id="delForm">
+		<div class="modal-content2">
+			<span class="close2" onclick="closeDelModal()">&times;</span>
+			<h1 class="title2">Отменить запись</h1>
+			<br />
+			<label class="text" for="id">Id записи:</label>
+			<input type="text" id="id4" />
+			<br /><br />
+			<div class="button5" onclick="delRecord2()">
+				<div class="inner5">Отменить</div>
 			</div>
 		</div>
+	</div>
+</body>
 
-		<div class="footer-container">
-			<div class="rectangle"></div>
-			<div class="logo"><h3>Beauty in detail</h3></div>
-		</div>
-		<div id="delForm">
-			<div class="modal-content2">
-				<span class="close2" onclick="closeDelModal()">&times;</span>
-				<h1 class="title2">Отменить запись</h1>
-				<br />
-				<label class="text" for="id">Id записи:</label>
-				<input type="text" id="id4" />
-				<br /><br />
-				<div class="button5" onclick="delRecord2()">
-					<div class="inner5">Отменить</div>
-				</div>
-			</div>
-		</div>
-	</body>
 </html>

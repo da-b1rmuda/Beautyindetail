@@ -170,7 +170,7 @@ body {
 .logo {
   position: absolute;
   top: 5px;
-  right: 650px;
+  margin-left: 45%;
   font-size: 1.7rem;
   color: #0e2431;
   font-family: Luminari, fantasy;
@@ -214,9 +214,7 @@ body {
 .container2 {
   width: 798px;
   height: 685px;
-  top: 560px;
-  left: 350px;
-  position: absolute;
+  position: relative;
 }
 
 .title {
@@ -418,8 +416,7 @@ body {
 .container3 {
   width: 798px;
   height: 647px;
-  top: 1250px;
-  left: 350px;
+  margin-top: 680px;
   position: absolute;
 }
 
@@ -478,8 +475,7 @@ body {
 .component4 {
   width: 857px;
   height: 362px;
-  top: 1930px;
-  left: 350px;
+  margin-top: 1350px;
   position: absolute;
 }
 
@@ -617,8 +613,7 @@ body {
 .contact-container {
   width: 818px;
   height: 280px;
-  top: 2360px;
-  left: 350px;
+  margin-top: 1770px;
   position: absolute;
 }
 

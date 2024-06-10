@@ -1,146 +1,153 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beauty in detail</title>
-<style type="text/css">
-@import url("Styles/Css2.css");
-</style>
-<script async src="./Scripts/Auth.js"></script>
-<script async src="./Scripts/Makeup.js"></script>
-<script async src="./Scripts/Reg.js"></script>
-<script src="./Scripts/Http/http.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty in detail</title>
+  <style type="text/css">
+    @import url("Styles/Css2.css");
+  </style>
+  <script async src="./Scripts/Auth.js"></script>
+  <script async src="./Scripts/Makeup.js"></script>
+  <script async src="./Scripts/Reg.js"></script>
+  <script src="./Scripts/Http/http.js"></script>
 </head>
- <body>
- <nav>
-      <div class="navbar">
-        <div class="container1 nav-container1">
-          <input class="checkbox" type="checkbox"  />
-            <div class="hamburger-lines">
-              <span class="line line1"></span>
-              <span class="line line2"></span>
-              <span class="line line3"></span>
-            </div> 
-			<div class="logo2">
-            <h1>Beauty in detail</h1>
-          </div> 
-			<div class="address"> <a>г. Димитровград, пр. Ленина д.43 </a></div>
-			<div class="phone"><a>+7(937)124-98-63</a></div>
-			<div class="time"><a>Пн-Вс 09:00-18:00</a> </div>
-          <div class="menu-items">
-            <li><a href="Beauty in detail.html" class="a1">Главная</a></li>
-            <li><a  class="a1">Прайс-лист</a></li>
-            <li><a  class="a1">Контакты</a></li>
-          </div> 
-          <div class="photo1"><img class="img1" src="Image/Maкияж.png"></div>
-        </div> 
-      </div>
- </nav>
 
- <div id="priceListData">
-  <div class="PriceList">Прайс-лист</div>
-  <div class="tab">
-    <div id="nameservice" class="nameservice">Наименование услуги</div>
-    <div id="timeservice" class="timeservice">Время</div>
-    <div id="priceservice" class="priceservice">Цена</div>
-    <div class="tab2"> </div>
-  </div>
-  <div class="button" onclick="openModal()">
-    <div class="inner">Онлайн запись</div>
-  </div>
-</div>
-
- <div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <a class="AV">Авторизация</a>
-    <br><br>
-    <form id="FormAvtoriz">
-      <input id="login" class="LP" type="text" placeholder="Логин">
-      <input id="password" class="LP" type="password" placeholder="Пароль">
-      <br>
-      <div class="container">
-      <button class="AVbutton" type="submit">Войти</button>
-      <button class="AVbutton" type="button" onclick="openRegistrationModal()">Создать аккаунт</button> 
-      </div>
-      <div class="password3" onclick="openRecoveryModal()"> <p>Восстановление пароля</p></div>
-     
-    </form>
-  </div>
-</div>
-
-<div id="modal-recovery" class="modalrecovery">
-  <div class="modal-content3">
-    <span class="close" onclick="closemodalrecovery()">&times;</span>
-    <a class="AV">Восстановление пароля</a>
-    <form id="FormRecovery">
-      <input id="email" class="LP" type="email" placeholder="Электронная почта клиента">
-      <input id="recoveryCode" class="LP" type="text" placeholder="Введите код восстановления" style="display: none;">
-      <button class="AVbutton2" id="ButtonRecovery" type="submit">Отправить</button>
-    </form>
-  </div>
-</div>
-
-<div id="modalpassword" class="modalpassword">
-  <div class="modal-content4">
-    <span class="close" onclick="closemodalpassword()">&times;</span>
-    <a class="AV">Смена пароля</a>
-    <br><br>
-    <form id="FormPassword">
-      <input id="newPassword" class="LP" type="password" autocomplete="on" placeholder="Новый пароль">
-      <br>
-      <input id="confirmNewPassword" class="LP" type="password" autocomplete="on" placeholder="Подтвердите новый пароль">
-      <br>
-      <div class="container">
-      <button class="AVbutton2" id="passwordbutton" type="submit">Изменить</button>
-      </div> 
-    </form>
-  </div>
-</div>
-<div id="registrationModal" class="registrationModal">
-  <div class="modal-content2">
-    <span class="close" onclick="closeRegistrationModal()">&times;</span>
-    <a class="AV">Регистрация</a>
-    <br><br>
-    <form id="FormReg">
-      <input id="lastname" class="LP" type="text" placeholder="Фамилия">
-      <input id="name2" class="LP" type="text" placeholder="Имя">
-      <input id="patronymic" class="LP" type="text" placeholder="Отчество">
-      <input id="phone3" class="LP" type="tel" placeholder="Номер телефона">
-      <input id="email3" class="LP" type="tel" placeholder="Электронная почта">
-      <input id="dateofbirth" class="LP" type="date" placeholder="Дата рождения">
-      <input id="login2" class="LP" type="text" placeholder="Логин">
-      <input id="password2" class="LP" type="password" placeholder="Пароль">
-      <br>
-      <div class="container">
-      <button id="reg" class="AVbutton" type="submit">Зарегистрироваться</button>
-    </div>
-    </form>
-  </div>
-</div>
-
-    <section id="main-section2">
-        <div class="contact-container">
-          <div class="contact-title">Контакты</div>
-          <img class="contact-image" src="Image/карта.png" />
-          <div class="contact-address">
-              <div class="contact-info">Адрес:</div>
-              <div class="contact-info">г. Димитровград, пр. Ленина д.43</div>
-          </div>
-          <div class="contact-schedule">
-              <div class="contact-info">График работы:</div>
-              <div class="contact-info">Пн-Вс: 9:00-18:00</div>
-          </div>
-          <div class="contact-phone">
-              <div class="contact-info">Номер для связи:</div>
-              <div class="contact-info">+7(937)124-98-633</div>
-          </div>
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="container1 nav-container1">
+        <input class="checkbox" type="checkbox" />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
         </div>
-        </section>
-        <div class="footer-container">
-            <div class="rectangle"></div>
-            <div class="logo"><h3>Beauty in detail</h3></div>
-          </div>
- </body>
+        <div class="logo2">
+          <h1>Beauty in detail</h1>
+        </div>
+        <div class="address"> <a>г. Димитровград, пр. Ленина д.43 </a></div>
+        <div class="phone"><a>+7(937)124-98-63</a></div>
+        <div class="time"><a>Пн-Вс 09:00-18:00</a> </div>
+        <div class="menu-items">
+          <li><a href="Beauty in detail.html" class="a1">Главная</a></li>
+          <li><a class="a1">Прайс-лист</a></li>
+          <li><a class="a1">Контакты</a></li>
+        </div>
+        <div class="photo1"><img class="img1" src="Image/Maкияж.png"></div>
+      </div>
+    </div>
+  </nav>
+  <div style="display: flex;flex-direction: column;margin-top: 510px;align-items: center;">
+    <div id="priceListData">
+      <div class="PriceList">Прайс-лист</div>
+      <div class="tab">
+        <div id="nameservice" class="nameservice">Наименование услуги</div>
+        <div id="timeservice" class="timeservice">Время</div>
+        <div id="priceservice" class="priceservice">Цена</div>
+        <div class="tab2"> </div>
+      </div>
+      <div class="button" onclick="openModal()">
+        <div class="inner">Онлайн запись</div>
+      </div>
+    </div>
+    <div class="contact-container">
+      <div class="contact-title">Контакты</div>
+      <img class="contact-image" src="Image/карта.png" />
+      <div class="contact-address">
+        <div class="contact-info">Адрес:</div>
+        <div class="contact-info">г. Димитровград, пр. Ленина д.43</div>
+      </div>
+      <div class="contact-schedule">
+        <div class="contact-info">График работы:</div>
+        <div class="contact-info">Пн-Вс: 9:00-18:00</div>
+      </div>
+      <div class="contact-phone">
+        <div class="contact-info">Номер для связи:</div>
+        <div class="contact-info">+7(937)124-98-633</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <a class="AV">Авторизация</a>
+      <br><br>
+      <form id="FormAvtoriz">
+        <input id="login" class="LP" type="text" placeholder="Логин">
+        <input id="password" class="LP" type="password" placeholder="Пароль">
+        <br>
+        <div class="container">
+          <button class="AVbutton" type="submit">Войти</button>
+          <button class="AVbutton" type="button" onclick="openRegistrationModal()">Создать аккаунт</button>
+        </div>
+        <div class="password3" onclick="openRecoveryModal()">
+          <p>Восстановление пароля</p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <div id="modal-recovery" class="modalrecovery">
+    <div class="modal-content3">
+      <span class="close" onclick="closemodalrecovery()">&times;</span>
+      <a class="AV">Восстановление пароля</a>
+      <form id="FormRecovery">
+        <input id="email" class="LP" type="email" placeholder="Электронная почта клиента">
+        <input id="recoveryCode" class="LP" type="text" placeholder="Введите код восстановления" style="display: none;">
+        <button class="AVbutton2" id="ButtonRecovery" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="modalpassword" class="modalpassword">
+    <div class="modal-content4">
+      <span class="close" onclick="closemodalpassword()">&times;</span>
+      <a class="AV">Смена пароля</a>
+      <br><br>
+      <form id="FormPassword">
+        <input id="newPassword" class="LP" type="password" autocomplete="on" placeholder="Новый пароль">
+        <br>
+        <input id="confirmNewPassword" class="LP" type="password" autocomplete="on"
+          placeholder="Подтвердите новый пароль">
+        <br>
+        <div class="container">
+          <button class="AVbutton2" id="passwordbutton" type="submit">Изменить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="registrationModal" class="registrationModal">
+    <div class="modal-content2">
+      <span class="close" onclick="closeRegistrationModal()">&times;</span>
+      <a class="AV">Регистрация</a>
+      <br><br>
+      <form id="FormReg">
+        <input id="lastname" class="LP" type="text" placeholder="Фамилия">
+        <input id="name2" class="LP" type="text" placeholder="Имя">
+        <input id="patronymic" class="LP" type="text" placeholder="Отчество">
+        <input id="phone3" class="LP" type="tel" placeholder="Номер телефона">
+        <input id="email3" class="LP" type="tel" placeholder="Электронная почта">
+        <input id="dateofbirth" class="LP" type="date" placeholder="Дата рождения">
+        <input id="login2" class="LP" type="text" placeholder="Логин">
+        <input id="password2" class="LP" type="password" placeholder="Пароль">
+        <br>
+        <div class="container">
+          <button id="reg" class="AVbutton" type="submit">Зарегистрироваться</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-container">
+    <div class="rectangle"></div>
+    <div class="logo">
+      <h3>Beauty in detail</h3>
+    </div>
+  </div>
+</body>
+
 </html>

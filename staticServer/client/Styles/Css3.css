@@ -178,7 +178,7 @@ body {
 
 .photo1 {
   position: absolute;
-  left: 50px;
+  left: 40px;
   top: 80px;
 }
 
@@ -219,7 +219,7 @@ body {
 }
 
 .title3 {
-  left: -40px;
+  left: -120px;
   top: 15px;
   position: absolute;
   color: #efb7b7;
@@ -232,8 +232,6 @@ body {
 .container2 {
   width: 799px;
   height: 335px;
-  top: 570px;
-  left: 300px;
   position: absolute;
 }
 
@@ -309,7 +307,6 @@ body {
   width: 1030px;
   height: 335px;
   top: 660px;
-  left: 260px;
   position: absolute;
 }
 
@@ -569,8 +566,8 @@ tr:nth-child(even) {
 }
 
 #button2 {
-  left: 1100px;
-  top: 540px;
+  left: 410px;
+  top: 20px;
   width: 160px;
   height: 40px;
   position: relative;
@@ -603,8 +600,8 @@ tr:nth-child(even) {
 }
 
 #button3 {
-  left: 1100px;
-  top: 540px;
+  left: 410px;
+  top: 20px;
   width: 160px;
   height: 40px;
   position: relative;
@@ -795,7 +792,7 @@ tr:nth-child(even) {
   .title3 {
     font-size: 18px;
     line-height: 15.07px;
-    left: 5%;
+    left: 0;
     width: 300px;
   }
 
