@@ -8,7 +8,7 @@ services:
       - CLIENT_URL=http://87.242.87.214:8030
       - DB_HOST=postgres
       - DB_USERNAME=postgres
-      - DB_PASSWORD=password
+      - DB_PASSWORD=Sk738MN2lw
       - DB_DATABASE=Beauty_in_details
     ports:
       - '5011:5005'
@@ -39,7 +39,7 @@ services:
     environment:
       - POSTGRES_DB=Beauty_in_details
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_PASSWORD=Sk738MN2lw
       - MAX_LOGIN_ATTEMPTS=0
     networks:
       network:
