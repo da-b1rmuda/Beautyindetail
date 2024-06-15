@@ -12,18 +12,18 @@ body {
 }
 table {
   border-collapse: collapse;
-  width: 90%;
+  width: 75%;
 }
 #tableContainer {
   display: flex;
   justify-content: center;
-  margin-left: 5%;
+  margin-left: 0%;
 }
 .hamburger-menu{
   display: none;
 }
 #searchInput {
-  width: 1150px;
+  width: 75%;
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #EFB7B7;
@@ -55,7 +55,7 @@ table {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  width: 1150px;
+  width: 75%;
   margin-left: 10%;
 }
 
@@ -108,10 +108,10 @@ table, th, td {
 }
 
 th, td {
-  padding: 8px;
+  padding: 5px;
   text-align: left;
   color: black;
-font-size: 16px; 
+font-size: 14px; 
 font-family: Montserrat; 
 }
 .sidebar {
