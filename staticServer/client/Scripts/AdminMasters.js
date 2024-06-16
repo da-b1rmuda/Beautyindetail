@@ -111,7 +111,7 @@ window.onload = function () {
 	}
 
 	let currentPage = 1
-	const itemsPerPage = 2 // Количество элементов на странице
+	const itemsPerPage = 3 // Количество элементов на странице
 
 	// Функция для отображения данных на текущей странице
 	function showPage(pageNumber) {

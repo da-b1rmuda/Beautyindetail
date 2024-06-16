@@ -170,7 +170,7 @@ body {
 .logo {
   position: absolute;
   top: 5px;
-  margin-left: 45%;
+  margin-left: 43%;
   font-size: 1.7rem;
   color: #0e2431;
   font-family: Luminari, fantasy;
@@ -178,7 +178,7 @@ body {
 
 .photo1 {
   position: absolute;
-  left: 50px;
+  left: 20%;
   top: 80px;
   width: 100%;
 }
@@ -422,7 +422,7 @@ margin-top: 770px;
 #priceListData {
   width: 799px;
   height: 335px;
-  margin-top: 50px;
+  margin-top: 15px;
   position: absolute;
 }
 
@@ -441,7 +441,7 @@ margin-top: 770px;
   width: 764px;
   height: 322px;
   left: 1px;
-  top: 88px;
+  top: 95px;
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -451,7 +451,7 @@ margin-top: 770px;
   width: 764px;
   height: 50px;
   left: 1px;
-  top: 130px;
+  top: 110px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -535,6 +535,7 @@ margin-top: 770px;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.30);
   background: #ffcccc;
   border-radius: 5px;
+  margin-left: 90px;
   border: none;
   display: flex;
   justify-content: center;
@@ -701,8 +702,9 @@ margin-top: 770px;
 
   .contact-container {
     width: 350px;
-    top: 450px;
+    top: -310px;
     left: 0;
+    height: auto;
   }
 
   .contact-title {
@@ -766,15 +768,45 @@ margin-top: 770px;
     width: 100%;
     height: 40px;
     left: 0px;
-    top: 0px;
+    top: 10px;
     position: absolute;
     background: white;
   }
 
   .logo {
-    font-size: 16px;
-    left: 120px;
-    width: 60%;
-    top: 8px;
+    font-size: 12px;
+    margin-left: 40%;
+    top: 18px;
+  }
+  .modal{
+    margin-left: -10px;
+  }
+  .registrationModal{
+    margin-left: 17px;
+    margin-top: -10px;
+  }
+  .modalrecovery{
+    margin-left: -10px;
+  }
+  .modalpassword{
+    margin-left: -10px;
+  }
+  .modal-content {
+    width: 85%;
+  }
+  .password3{
+    margin-left: 20%;
+  }
+  .modal-content2 {
+    width: 85%;
+  }
+  .modal-content3 {
+    width: 85%;
+  }
+  .modal-content4 {
+    width: 85%;
+  }
+  .AVbutton2{
+    margin-left: 60px;
   }
 }
