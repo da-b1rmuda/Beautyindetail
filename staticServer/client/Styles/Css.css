@@ -416,7 +416,7 @@ body {
 .container3 {
   width: 798px;
   height: 647px;
-  margin-top: 20px;
+  margin-top: 700px;
   position: absolute;
 }
 
@@ -613,7 +613,7 @@ body {
 .contact-container {
   width: 818px;
   height: 280px;
-  margin-top: 0px;
+  margin-top: 1780px;
   position: absolute;
 }
 
@@ -969,6 +969,7 @@ body {
     left: 20px;
     width: 100%;
     height: auto;
+    margin-top: auto;
   }
 
   .container2 {
@@ -1351,7 +1352,7 @@ body {
   .contact-container {
     width: 350px;
     height: 200px;
-    top: 1120px;
+    margin-top: 560px;
     left: 0;
   }
 
